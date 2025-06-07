@@ -1,0 +1,990 @@
+<!doctype html>
+<html class="no-js">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" charset="UTF-8">
+    <title>Audits</title>
+<link href="../../../images/logo-icon.svg" rel="icon" type="image/svg">    <script>var pathToRoot = "../../../";</script>
+    <script>document.documentElement.classList.replace("no-js","js");</script>
+    <script>const storage = localStorage.getItem("dokka-dark-mode")
+    if (storage == null) {
+        const osDarkSchemePreferred = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches
+        if (osDarkSchemePreferred === true) {
+            document.getElementsByTagName("html")[0].classList.add("theme-dark")
+        }
+    } else {
+        const savedDarkMode = JSON.parse(storage)
+        if(savedDarkMode === true) {
+            document.getElementsByTagName("html")[0].classList.add("theme-dark")
+        }
+    }
+    </script>
+<script type="text/javascript" src="https://unpkg.com/kotlin-playground@1/dist/playground.min.js" async></script>
+<script type="text/javascript" src="../../../scripts/sourceset_dependencies.js" async></script>
+<link href="../../../styles/style.css" rel="Stylesheet">
+<link href="../../../styles/main.css" rel="Stylesheet">
+<link href="../../../styles/prism.css" rel="Stylesheet">
+<link href="../../../styles/logo-styles.css" rel="Stylesheet">
+<link href="../../../styles/font-jb-sans-auto.css" rel="Stylesheet">
+<link href="../../../ui-kit/ui-kit.min.css" rel="Stylesheet">
+<script type="text/javascript" src="../../../scripts/clipboard.js" async></script>
+<script type="text/javascript" src="../../../scripts/navigation-loader.js" async></script>
+<script type="text/javascript" src="../../../scripts/platform-content-handler.js" async></script>
+<script type="text/javascript" src="../../../scripts/main.js" defer></script>
+<script type="text/javascript" src="../../../scripts/prism.js" async></script>
+<script type="text/javascript" src="../../../ui-kit/ui-kit.min.js" defer></script>
+<script type="text/javascript" src="../../../scripts/symbol-parameters-wrapper_deferred.js" defer></script></head>
+<body>
+    <div class="root">
+    <nav class="navigation theme-dark" id="navigation-wrapper">
+<a class="library-name--link" href="../../../index.html">
+                    kdriver
+            </a>        <button class="navigation-controls--btn navigation-controls--btn_toc ui-kit_mobile-only" id="toc-toggle" type="button">Toggle table of contents
+        </button>
+        <div class="navigation-controls--break ui-kit_mobile-only"></div>
+        <div class="library-version" id="library-version">0.1.10
+        </div>
+        <div class="navigation-controls">
+        <div class="filter-section filter-section_loading" id="filter-section">
+                <button class="platform-tag platform-selector common-like" data-active="" data-filter=":cdp:dokkaHtmlPartial/commonMain">common</button>
+            <div class="dropdown filter-section--dropdown" data-role="dropdown" id="filter-section-dropdown">
+                <button class="button button_dropdown filter-section--dropdown-toggle" role="combobox" data-role="dropdown-toggle" aria-controls="platform-tags-listbox" aria-haspopup="listbox" aria-expanded="false" aria-label="Toggle source sets"></button>
+                <ul role="listbox" id="platform-tags-listbox" class="dropdown--list" data-role="dropdown-listbox">
+                    <div class="dropdown--header"><span>Platform filter</span>
+                        <button class="button" data-role="dropdown-toggle" aria-label="Close platform filter">
+                            <i class="ui-kit-icon ui-kit-icon_cross"></i>
+                        </button>
+                    </div>
+                        <li role="option" class="dropdown--option platform-selector-option common-like" tabindex="0">
+                            <label class="checkbox">
+                                <input type="checkbox" class="checkbox--input" id=":cdp:dokkaHtmlPartial/commonMain" data-filter=":cdp:dokkaHtmlPartial/commonMain">
+                                <span class="checkbox--icon"></span>
+                                common
+                            </label>
+                        </li>
+                </ul>
+                <div class="dropdown--overlay"></div>
+            </div>
+        </div>
+            <button class="navigation-controls--btn navigation-controls--btn_theme" id="theme-toggle-button" type="button">Switch theme
+            </button>
+            <div class="navigation-controls--btn navigation-controls--btn_search" id="searchBar" role="button">Search in
+                API
+            </div>
+        </div>
+    </nav>
+        <div id="container">
+            <div class="sidebar" id="leftColumn">
+                <div class="dropdown theme-dark_mobile" data-role="dropdown" id="toc-dropdown">
+                    <ul role="listbox" id="toc-listbox" class="dropdown--list dropdown--list_toc-list" data-role="dropdown-listbox">
+                        <div class="dropdown--header">
+                            <span>
+                                    kdriver
+                            </span>
+                            <button class="button" data-role="dropdown-toggle" aria-label="Close table of contents">
+                                <i class="ui-kit-icon ui-kit-icon_cross"></i>
+                            </button>
+                        </div>
+                        <div class="sidebar--inner" id="sideMenu"></div>
+                    </ul>
+                    <div class="dropdown--overlay"></div>
+                </div>
+            </div>
+            <div id="main">
+<div class="main-content" data-page-type="classlike" id="content" pageids="cdp::dev.kdriver.cdp.domain/Audits///PointingToDeclaration//474703126">
+  <div class="breadcrumbs"><a href="../../index.html">cdp</a><span class="delimiter">/</span><a href="../index.html">dev.kdriver.cdp.domain</a><span class="delimiter">/</span><span class="current">Audits</span></div>
+  <div class="cover ">
+    <h1 class="cover"><span><span>Audits</span></span></h1>
+    <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":cdp:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword">class </span><a href="index.html">Audits</a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">cdp<span class="token operator">: </span><a href="../../dev.kdriver.cdp/-c-d-p/index.html">CDP</a></span></span><span class="token punctuation">)</span> : <a href="../../dev.kdriver.cdp/-domain/index.html">Domain</a></div><p class="paragraph">Audits domain allows investigation of page violations and possible improvements.</p></div></div>
+  </div>
+  <div class="tabbedcontent">
+    <div class="tabs-section" tabs-section="tabs-section"><button class="section-tab" data-active="" data-togglable="CONSTRUCTOR,TYPE,PROPERTY,FUNCTION">Members</button></div>
+    <div class="tabs-section-body">
+      <div data-togglable="CONSTRUCTOR">
+        <h2 class="">Constructors</h2>
+        <div class="table"><a data-name="-2000394304%2FConstructors%2F474703126" anchor-label="Audits" id="-2000394304%2FConstructors%2F474703126" data-filterable-set=":cdp:dokkaHtmlPartial/commonMain"></a>
+          <div class="table-row" data-togglable="CONSTRUCTOR" data-filterable-current=":cdp:dokkaHtmlPartial/commonMain" data-filterable-set=":cdp:dokkaHtmlPartial/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-audits.html"><span><span>Audits</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-2000394304%2FConstructors%2F474703126"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":cdp:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword">constructor</span><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">cdp<span class="token operator">: </span><a href="../../dev.kdriver.cdp/-c-d-p/index.html">CDP</a></span></span><span class="token punctuation">)</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div data-togglable="TYPE">
+        <h2 class="">Types</h2>
+        <div class="table"><a data-name="-1604747781%2FClasslikes%2F474703126" anchor-label="AffectedCookie" id="-1604747781%2FClasslikes%2F474703126" data-filterable-set=":cdp:dokkaHtmlPartial/commonMain"></a>
+          <div class="table-row" data-filterable-current=":cdp:dokkaHtmlPartial/commonMain" data-filterable-set=":cdp:dokkaHtmlPartial/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-affected-cookie/index.html"><span>Affected</span><wbr><span><span>Cookie</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1604747781%2FClasslikes%2F474703126"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":cdp:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><div class="block"><div class="block"><span class="token annotation builtin">@</span><span data-unresolved-link="kotlinx.serialization/Serializable///PointingToDeclaration/"><span class="token annotation builtin">Serializable</span></span></div></div><span class="token keyword">data </span><span class="token keyword">class </span><a href="-affected-cookie/index.html">AffectedCookie</a><span class="token punctuation">(</span><span class="parameters "><span class="parameter "><span class="token keyword">val </span>name<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>path<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>domain<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a></span></span><span class="token punctuation">)</span></div><div class="brief "><p class="paragraph">Information about a cookie that is affected by an inspector issue.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1423455754%2FClasslikes%2F474703126" anchor-label="AffectedFrame" id="-1423455754%2FClasslikes%2F474703126" data-filterable-set=":cdp:dokkaHtmlPartial/commonMain"></a>
+          <div class="table-row" data-filterable-current=":cdp:dokkaHtmlPartial/commonMain" data-filterable-set=":cdp:dokkaHtmlPartial/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-affected-frame/index.html"><span>Affected</span><wbr><span><span>Frame</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1423455754%2FClasslikes%2F474703126"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":cdp:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><div class="block"><div class="block"><span class="token annotation builtin">@</span><span data-unresolved-link="kotlinx.serialization/Serializable///PointingToDeclaration/"><span class="token annotation builtin">Serializable</span></span></div></div><span class="token keyword">data </span><span class="token keyword">class </span><a href="-affected-frame/index.html">AffectedFrame</a><span class="token punctuation">(</span><span class="parameters "><span class="parameter "><span class="token keyword">val </span>frameId<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a></span></span><span class="token punctuation">)</span></div><div class="brief "><p class="paragraph">Information about the frame affected by an inspector issue.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1892102508%2FClasslikes%2F474703126" anchor-label="AffectedRequest" id="-1892102508%2FClasslikes%2F474703126" data-filterable-set=":cdp:dokkaHtmlPartial/commonMain"></a>
+          <div class="table-row" data-filterable-current=":cdp:dokkaHtmlPartial/commonMain" data-filterable-set=":cdp:dokkaHtmlPartial/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-affected-request/index.html"><span>Affected</span><wbr><span><span>Request</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1892102508%2FClasslikes%2F474703126"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":cdp:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><div class="block"><div class="block"><span class="token annotation builtin">@</span><span data-unresolved-link="kotlinx.serialization/Serializable///PointingToDeclaration/"><span class="token annotation builtin">Serializable</span></span></div></div><span class="token keyword">data </span><span class="token keyword">class </span><a href="-affected-request/index.html">AffectedRequest</a><span class="token punctuation">(</span><span class="parameters "><span class="parameter "><span class="token keyword">val </span>requestId<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>url<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a><span class="token operator">?</span><span class="token operator"> = </span>null</span></span><span class="token punctuation">)</span></div><div class="brief "><p class="paragraph">Information about a request that is affected by an inspector issue.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1774848453%2FClasslikes%2F474703126" anchor-label="AttributionReportingIssueDetails" id="-1774848453%2FClasslikes%2F474703126" data-filterable-set=":cdp:dokkaHtmlPartial/commonMain"></a>
+          <div class="table-row" data-filterable-current=":cdp:dokkaHtmlPartial/commonMain" data-filterable-set=":cdp:dokkaHtmlPartial/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-attribution-reporting-issue-details/index.html"><span>Attribution</span><wbr><span>Reporting</span><wbr><span>Issue</span><wbr><span><span>Details</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1774848453%2FClasslikes%2F474703126"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":cdp:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><div class="block"><div class="block"><span class="token annotation builtin">@</span><span data-unresolved-link="kotlinx.serialization/Serializable///PointingToDeclaration/"><span class="token annotation builtin">Serializable</span></span></div></div><span class="token keyword">data </span><span class="token keyword">class </span><a href="-attribution-reporting-issue-details/index.html">AttributionReportingIssueDetails</a><span class="token punctuation">(</span><span class="parameters "><span class="parameter "><span class="token keyword">val </span>violationType<span class="token operator">: </span><a href="-attribution-reporting-issue-type/index.html">Audits.AttributionReportingIssueType</a><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>request<span class="token operator">: </span><a href="-affected-request/index.html">Audits.AffectedRequest</a><span class="token operator">?</span><span class="token operator"> = </span>null<span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>violatingNodeId<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-int/index.html">Int</a><span class="token operator">?</span><span class="token operator"> = </span>null<span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>invalidParameter<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a><span class="token operator">?</span><span class="token operator"> = </span>null</span></span><span class="token punctuation">)</span></div><div class="brief "><p class="paragraph">Details for issues around "Attribution Reporting API" usage. Explainer: https://github.com/WICG/attribution-reporting-api</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-144444501%2FClasslikes%2F474703126" anchor-label="AttributionReportingIssueType" id="-144444501%2FClasslikes%2F474703126" data-filterable-set=":cdp:dokkaHtmlPartial/commonMain"></a>
+          <div class="table-row" data-filterable-current=":cdp:dokkaHtmlPartial/commonMain" data-filterable-set=":cdp:dokkaHtmlPartial/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-attribution-reporting-issue-type/index.html"><span>Attribution</span><wbr><span>Reporting</span><wbr><span>Issue</span><wbr><span><span>Type</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-144444501%2FClasslikes%2F474703126"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":cdp:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><div class="block"><div class="block"><span class="token annotation builtin">@</span><span data-unresolved-link="kotlinx.serialization/Serializable///PointingToDeclaration/"><span class="token annotation builtin">Serializable</span></span></div></div><span class="token keyword">enum </span><a href="-attribution-reporting-issue-type/index.html">AttributionReportingIssueType</a> : <a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-enum/index.html">Enum</a><span class="token operator">&lt;</span><a href="-attribution-reporting-issue-type/index.html">Audits.AttributionReportingIssueType</a><span class="token operator">&gt; </span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1836429762%2FClasslikes%2F474703126" anchor-label="BlockedByResponseIssueDetails" id="1836429762%2FClasslikes%2F474703126" data-filterable-set=":cdp:dokkaHtmlPartial/commonMain"></a>
+          <div class="table-row" data-filterable-current=":cdp:dokkaHtmlPartial/commonMain" data-filterable-set=":cdp:dokkaHtmlPartial/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-blocked-by-response-issue-details/index.html"><span>Blocked</span><wbr><span>By</span><wbr><span>Response</span><wbr><span>Issue</span><wbr><span><span>Details</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1836429762%2FClasslikes%2F474703126"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":cdp:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><div class="block"><div class="block"><span class="token annotation builtin">@</span><span data-unresolved-link="kotlinx.serialization/Serializable///PointingToDeclaration/"><span class="token annotation builtin">Serializable</span></span></div></div><span class="token keyword">data </span><span class="token keyword">class </span><a href="-blocked-by-response-issue-details/index.html">BlockedByResponseIssueDetails</a><span class="token punctuation">(</span><span class="parameters "><span class="parameter "><span class="token keyword">val </span>request<span class="token operator">: </span><a href="-affected-request/index.html">Audits.AffectedRequest</a><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>parentFrame<span class="token operator">: </span><a href="-affected-frame/index.html">Audits.AffectedFrame</a><span class="token operator">?</span><span class="token operator"> = </span>null<span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>blockedFrame<span class="token operator">: </span><a href="-affected-frame/index.html">Audits.AffectedFrame</a><span class="token operator">?</span><span class="token operator"> = </span>null<span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>reason<span class="token operator">: </span><a href="-blocked-by-response-reason/index.html">Audits.BlockedByResponseReason</a></span></span><span class="token punctuation">)</span></div><div class="brief "><p class="paragraph">Details for a request that has been blocked with the BLOCKED_BY_RESPONSE code. Currently only used for COEP/COOP, but may be extended to include some CSP errors in the future.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1450125959%2FClasslikes%2F474703126" anchor-label="BlockedByResponseReason" id="1450125959%2FClasslikes%2F474703126" data-filterable-set=":cdp:dokkaHtmlPartial/commonMain"></a>
+          <div class="table-row" data-filterable-current=":cdp:dokkaHtmlPartial/commonMain" data-filterable-set=":cdp:dokkaHtmlPartial/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-blocked-by-response-reason/index.html"><span>Blocked</span><wbr><span>By</span><wbr><span>Response</span><wbr><span><span>Reason</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1450125959%2FClasslikes%2F474703126"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":cdp:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><div class="block"><div class="block"><span class="token annotation builtin">@</span><span data-unresolved-link="kotlinx.serialization/Serializable///PointingToDeclaration/"><span class="token annotation builtin">Serializable</span></span></div></div><span class="token keyword">enum </span><a href="-blocked-by-response-reason/index.html">BlockedByResponseReason</a> : <a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-enum/index.html">Enum</a><span class="token operator">&lt;</span><a href="-blocked-by-response-reason/index.html">Audits.BlockedByResponseReason</a><span class="token operator">&gt; </span></div><div class="brief "><p class="paragraph">Enum indicating the reason a response has been blocked. These reasons are refinements of the net error BLOCKED_BY_RESPONSE.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="108747%2FClasslikes%2F474703126" anchor-label="BounceTrackingIssueDetails" id="108747%2FClasslikes%2F474703126" data-filterable-set=":cdp:dokkaHtmlPartial/commonMain"></a>
+          <div class="table-row" data-filterable-current=":cdp:dokkaHtmlPartial/commonMain" data-filterable-set=":cdp:dokkaHtmlPartial/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-bounce-tracking-issue-details/index.html"><span>Bounce</span><wbr><span>Tracking</span><wbr><span>Issue</span><wbr><span><span>Details</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="108747%2FClasslikes%2F474703126"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":cdp:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><div class="block"><div class="block"><span class="token annotation builtin">@</span><span data-unresolved-link="kotlinx.serialization/Serializable///PointingToDeclaration/"><span class="token annotation builtin">Serializable</span></span></div></div><span class="token keyword">data </span><span class="token keyword">class </span><a href="-bounce-tracking-issue-details/index.html">BounceTrackingIssueDetails</a><span class="token punctuation">(</span><span class="parameters "><span class="parameter "><span class="token keyword">val </span>trackingSites<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin.collections/-list/index.html">List</a><span class="token operator">&lt;</span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a><span class="token operator">&gt;</span></span></span><span class="token punctuation">)</span></div><div class="brief "><p class="paragraph">This issue warns about sites in the redirect chain of a finished navigation that may be flagged as trackers and have their state cleared if they don't receive a user interaction. Note that in this context 'site' means eTLD+1. For example, if the URL <code class="lang-kotlin">https://example.test:80/bounce</code> was in the redirect chain, the site reported would be <code class="lang-kotlin">example.test</code>.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="123767092%2FClasslikes%2F474703126" anchor-label="CheckContrastParameter" id="123767092%2FClasslikes%2F474703126" data-filterable-set=":cdp:dokkaHtmlPartial/commonMain"></a>
+          <div class="table-row" data-filterable-current=":cdp:dokkaHtmlPartial/commonMain" data-filterable-set=":cdp:dokkaHtmlPartial/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-check-contrast-parameter/index.html"><span>Check</span><wbr><span>Contrast</span><wbr><span><span>Parameter</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="123767092%2FClasslikes%2F474703126"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":cdp:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><div class="block"><div class="block"><span class="token annotation builtin">@</span><span data-unresolved-link="kotlinx.serialization/Serializable///PointingToDeclaration/"><span class="token annotation builtin">Serializable</span></span></div></div><span class="token keyword">data </span><span class="token keyword">class </span><a href="-check-contrast-parameter/index.html">CheckContrastParameter</a><span class="token punctuation">(</span><span class="parameters "><span class="parameter "><span class="token keyword">val </span>reportAAA<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-boolean/index.html">Boolean</a><span class="token operator">?</span><span class="token operator"> = </span>null</span></span><span class="token punctuation">)</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1913952738%2FClasslikes%2F474703126" anchor-label="CheckFormsIssuesReturn" id="1913952738%2FClasslikes%2F474703126" data-filterable-set=":cdp:dokkaHtmlPartial/commonMain"></a>
+          <div class="table-row" data-filterable-current=":cdp:dokkaHtmlPartial/commonMain" data-filterable-set=":cdp:dokkaHtmlPartial/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-check-forms-issues-return/index.html"><span>Check</span><wbr><span>Forms</span><wbr><span>Issues</span><wbr><span><span>Return</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1913952738%2FClasslikes%2F474703126"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":cdp:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><div class="block"><div class="block"><span class="token annotation builtin">@</span><span data-unresolved-link="kotlinx.serialization/Serializable///PointingToDeclaration/"><span class="token annotation builtin">Serializable</span></span></div></div><span class="token keyword">data </span><span class="token keyword">class </span><a href="-check-forms-issues-return/index.html">CheckFormsIssuesReturn</a><span class="token punctuation">(</span><span class="parameters "><span class="parameter "><span class="token keyword">val </span>formIssues<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin.collections/-list/index.html">List</a><span class="token operator">&lt;</span><a href="-generic-issue-details/index.html">Audits.GenericIssueDetails</a><span class="token operator">&gt;</span></span></span><span class="token punctuation">)</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-414633448%2FClasslikes%2F474703126" anchor-label="ClientHintIssueDetails" id="-414633448%2FClasslikes%2F474703126" data-filterable-set=":cdp:dokkaHtmlPartial/commonMain"></a>
+          <div class="table-row" data-filterable-current=":cdp:dokkaHtmlPartial/commonMain" data-filterable-set=":cdp:dokkaHtmlPartial/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-client-hint-issue-details/index.html"><span>Client</span><wbr><span>Hint</span><wbr><span>Issue</span><wbr><span><span>Details</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-414633448%2FClasslikes%2F474703126"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":cdp:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><div class="block"><div class="block"><span class="token annotation builtin">@</span><span data-unresolved-link="kotlinx.serialization/Serializable///PointingToDeclaration/"><span class="token annotation builtin">Serializable</span></span></div></div><span class="token keyword">data </span><span class="token keyword">class </span><a href="-client-hint-issue-details/index.html">ClientHintIssueDetails</a><span class="token punctuation">(</span><span class="parameters "><span class="parameter "><span class="token keyword">val </span>sourceCodeLocation<span class="token operator">: </span><a href="-source-code-location/index.html">Audits.SourceCodeLocation</a><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>clientHintIssueReason<span class="token operator">: </span><a href="-client-hint-issue-reason/index.html">Audits.ClientHintIssueReason</a></span></span><span class="token punctuation">)</span></div><div class="brief "><p class="paragraph">This issue tracks client hints related issues. It's used to deprecate old features, encourage the use of new ones, and provide general guidance.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1757227164%2FClasslikes%2F474703126" anchor-label="ClientHintIssueReason" id="-1757227164%2FClasslikes%2F474703126" data-filterable-set=":cdp:dokkaHtmlPartial/commonMain"></a>
+          <div class="table-row" data-filterable-current=":cdp:dokkaHtmlPartial/commonMain" data-filterable-set=":cdp:dokkaHtmlPartial/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-client-hint-issue-reason/index.html"><span>Client</span><wbr><span>Hint</span><wbr><span>Issue</span><wbr><span><span>Reason</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1757227164%2FClasslikes%2F474703126"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":cdp:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><div class="block"><div class="block"><span class="token annotation builtin">@</span><span data-unresolved-link="kotlinx.serialization/Serializable///PointingToDeclaration/"><span class="token annotation builtin">Serializable</span></span></div></div><span class="token keyword">enum </span><a href="-client-hint-issue-reason/index.html">ClientHintIssueReason</a> : <a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-enum/index.html">Enum</a><span class="token operator">&lt;</span><a href="-client-hint-issue-reason/index.html">Audits.ClientHintIssueReason</a><span class="token operator">&gt; </span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1453366661%2FClasslikes%2F474703126" anchor-label="ContentSecurityPolicyIssueDetails" id="-1453366661%2FClasslikes%2F474703126" data-filterable-set=":cdp:dokkaHtmlPartial/commonMain"></a>
+          <div class="table-row" data-filterable-current=":cdp:dokkaHtmlPartial/commonMain" data-filterable-set=":cdp:dokkaHtmlPartial/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-content-security-policy-issue-details/index.html"><span>Content</span><wbr><span>Security</span><wbr><span>Policy</span><wbr><span>Issue</span><wbr><span><span>Details</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1453366661%2FClasslikes%2F474703126"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":cdp:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><div class="block"><div class="block"><span class="token annotation builtin">@</span><span data-unresolved-link="kotlinx.serialization/Serializable///PointingToDeclaration/"><span class="token annotation builtin">Serializable</span></span></div></div><span class="token keyword">data </span><span class="token keyword">class </span><a href="-content-security-policy-issue-details/index.html">ContentSecurityPolicyIssueDetails</a><span class="token punctuation">(</span><span class="parameters "><span class="parameter "><span class="token keyword">val </span>blockedURL<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a><span class="token operator">?</span><span class="token operator"> = </span>null<span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>violatedDirective<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>isReportOnly<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-boolean/index.html">Boolean</a><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>contentSecurityPolicyViolationType<span class="token operator">: </span><a href="-content-security-policy-violation-type/index.html">Audits.ContentSecurityPolicyViolationType</a><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>frameAncestor<span class="token operator">: </span><a href="-affected-frame/index.html">Audits.AffectedFrame</a><span class="token operator">?</span><span class="token operator"> = </span>null<span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>sourceCodeLocation<span class="token operator">: </span><a href="-source-code-location/index.html">Audits.SourceCodeLocation</a><span class="token operator">?</span><span class="token operator"> = </span>null<span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>violatingNodeId<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-int/index.html">Int</a><span class="token operator">?</span><span class="token operator"> = </span>null</span></span><span class="token punctuation">)</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1310254049%2FClasslikes%2F474703126" anchor-label="ContentSecurityPolicyViolationType" id="-1310254049%2FClasslikes%2F474703126" data-filterable-set=":cdp:dokkaHtmlPartial/commonMain"></a>
+          <div class="table-row" data-filterable-current=":cdp:dokkaHtmlPartial/commonMain" data-filterable-set=":cdp:dokkaHtmlPartial/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-content-security-policy-violation-type/index.html"><span>Content</span><wbr><span>Security</span><wbr><span>Policy</span><wbr><span>Violation</span><wbr><span><span>Type</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1310254049%2FClasslikes%2F474703126"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":cdp:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><div class="block"><div class="block"><span class="token annotation builtin">@</span><span data-unresolved-link="kotlinx.serialization/Serializable///PointingToDeclaration/"><span class="token annotation builtin">Serializable</span></span></div></div><span class="token keyword">enum </span><a href="-content-security-policy-violation-type/index.html">ContentSecurityPolicyViolationType</a> : <a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-enum/index.html">Enum</a><span class="token operator">&lt;</span><a href="-content-security-policy-violation-type/index.html">Audits.ContentSecurityPolicyViolationType</a><span class="token operator">&gt; </span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1459708327%2FClasslikes%2F474703126" anchor-label="CookieDeprecationMetadataIssueDetails" id="1459708327%2FClasslikes%2F474703126" data-filterable-set=":cdp:dokkaHtmlPartial/commonMain"></a>
+          <div class="table-row" data-filterable-current=":cdp:dokkaHtmlPartial/commonMain" data-filterable-set=":cdp:dokkaHtmlPartial/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-cookie-deprecation-metadata-issue-details/index.html"><span>Cookie</span><wbr><span>Deprecation</span><wbr><span>Metadata</span><wbr><span>Issue</span><wbr><span><span>Details</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1459708327%2FClasslikes%2F474703126"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":cdp:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><div class="block"><div class="block"><span class="token annotation builtin">@</span><span data-unresolved-link="kotlinx.serialization/Serializable///PointingToDeclaration/"><span class="token annotation builtin">Serializable</span></span></div></div><span class="token keyword">data </span><span class="token keyword">class </span><a href="-cookie-deprecation-metadata-issue-details/index.html">CookieDeprecationMetadataIssueDetails</a><span class="token punctuation">(</span><span class="parameters "><span class="parameter "><span class="token keyword">val </span>allowedSites<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin.collections/-list/index.html">List</a><span class="token operator">&lt;</span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a><span class="token operator">&gt;</span></span></span><span class="token punctuation">)</span></div><div class="brief "><p class="paragraph">This issue warns about third-party sites that are accessing cookies on the current page, and have been permitted due to having a global metadata grant. Note that in this context 'site' means eTLD+1. For example, if the URL <code class="lang-kotlin">https://example.test:80/web_page</code> was accessing cookies, the site reported would be <code class="lang-kotlin">example.test</code>.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1510527553%2FClasslikes%2F474703126" anchor-label="CookieExclusionReason" id="1510527553%2FClasslikes%2F474703126" data-filterable-set=":cdp:dokkaHtmlPartial/commonMain"></a>
+          <div class="table-row" data-filterable-current=":cdp:dokkaHtmlPartial/commonMain" data-filterable-set=":cdp:dokkaHtmlPartial/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-cookie-exclusion-reason/index.html"><span>Cookie</span><wbr><span>Exclusion</span><wbr><span><span>Reason</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1510527553%2FClasslikes%2F474703126"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":cdp:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><div class="block"><div class="block"><span class="token annotation builtin">@</span><span data-unresolved-link="kotlinx.serialization/Serializable///PointingToDeclaration/"><span class="token annotation builtin">Serializable</span></span></div></div><span class="token keyword">enum </span><a href="-cookie-exclusion-reason/index.html">CookieExclusionReason</a> : <a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-enum/index.html">Enum</a><span class="token operator">&lt;</span><a href="-cookie-exclusion-reason/index.html">Audits.CookieExclusionReason</a><span class="token operator">&gt; </span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-362372890%2FClasslikes%2F474703126" anchor-label="CookieIssueDetails" id="-362372890%2FClasslikes%2F474703126" data-filterable-set=":cdp:dokkaHtmlPartial/commonMain"></a>
+          <div class="table-row" data-filterable-current=":cdp:dokkaHtmlPartial/commonMain" data-filterable-set=":cdp:dokkaHtmlPartial/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-cookie-issue-details/index.html"><span>Cookie</span><wbr><span>Issue</span><wbr><span><span>Details</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-362372890%2FClasslikes%2F474703126"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":cdp:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><div class="block"><div class="block"><span class="token annotation builtin">@</span><span data-unresolved-link="kotlinx.serialization/Serializable///PointingToDeclaration/"><span class="token annotation builtin">Serializable</span></span></div></div><span class="token keyword">data </span><span class="token keyword">class </span><a href="-cookie-issue-details/index.html">CookieIssueDetails</a><span class="token punctuation">(</span><span class="parameters "><span class="parameter "><span class="token keyword">val </span>cookie<span class="token operator">: </span><a href="-affected-cookie/index.html">Audits.AffectedCookie</a><span class="token operator">?</span><span class="token operator"> = </span>null<span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>rawCookieLine<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a><span class="token operator">?</span><span class="token operator"> = </span>null<span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>cookieWarningReasons<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin.collections/-list/index.html">List</a><span class="token operator">&lt;</span><a href="-cookie-warning-reason/index.html">Audits.CookieWarningReason</a><span class="token operator">&gt;</span><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>cookieExclusionReasons<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin.collections/-list/index.html">List</a><span class="token operator">&lt;</span><a href="-cookie-exclusion-reason/index.html">Audits.CookieExclusionReason</a><span class="token operator">&gt;</span><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>operation<span class="token operator">: </span><a href="-cookie-operation/index.html">Audits.CookieOperation</a><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>siteForCookies<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a><span class="token operator">?</span><span class="token operator"> = </span>null<span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>cookieUrl<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a><span class="token operator">?</span><span class="token operator"> = </span>null<span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>request<span class="token operator">: </span><a href="-affected-request/index.html">Audits.AffectedRequest</a><span class="token operator">?</span><span class="token operator"> = </span>null</span></span><span class="token punctuation">)</span></div><div class="brief "><p class="paragraph">This information is currently necessary, as the front-end has a difficult time finding a specific cookie. With this, we can convey specific error information without the cookie.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1387402668%2FClasslikes%2F474703126" anchor-label="CookieOperation" id="1387402668%2FClasslikes%2F474703126" data-filterable-set=":cdp:dokkaHtmlPartial/commonMain"></a>
+          <div class="table-row" data-filterable-current=":cdp:dokkaHtmlPartial/commonMain" data-filterable-set=":cdp:dokkaHtmlPartial/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-cookie-operation/index.html"><span>Cookie</span><wbr><span><span>Operation</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1387402668%2FClasslikes%2F474703126"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":cdp:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><div class="block"><div class="block"><span class="token annotation builtin">@</span><span data-unresolved-link="kotlinx.serialization/Serializable///PointingToDeclaration/"><span class="token annotation builtin">Serializable</span></span></div></div><span class="token keyword">enum </span><a href="-cookie-operation/index.html">CookieOperation</a> : <a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-enum/index.html">Enum</a><span class="token operator">&lt;</span><a href="-cookie-operation/index.html">Audits.CookieOperation</a><span class="token operator">&gt; </span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1290051379%2FClasslikes%2F474703126" anchor-label="CookieWarningReason" id="1290051379%2FClasslikes%2F474703126" data-filterable-set=":cdp:dokkaHtmlPartial/commonMain"></a>
+          <div class="table-row" data-filterable-current=":cdp:dokkaHtmlPartial/commonMain" data-filterable-set=":cdp:dokkaHtmlPartial/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-cookie-warning-reason/index.html"><span>Cookie</span><wbr><span>Warning</span><wbr><span><span>Reason</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1290051379%2FClasslikes%2F474703126"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":cdp:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><div class="block"><div class="block"><span class="token annotation builtin">@</span><span data-unresolved-link="kotlinx.serialization/Serializable///PointingToDeclaration/"><span class="token annotation builtin">Serializable</span></span></div></div><span class="token keyword">enum </span><a href="-cookie-warning-reason/index.html">CookieWarningReason</a> : <a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-enum/index.html">Enum</a><span class="token operator">&lt;</span><a href="-cookie-warning-reason/index.html">Audits.CookieWarningReason</a><span class="token operator">&gt; </span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1809272253%2FClasslikes%2F474703126" anchor-label="CorsIssueDetails" id="1809272253%2FClasslikes%2F474703126" data-filterable-set=":cdp:dokkaHtmlPartial/commonMain"></a>
+          <div class="table-row" data-filterable-current=":cdp:dokkaHtmlPartial/commonMain" data-filterable-set=":cdp:dokkaHtmlPartial/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-cors-issue-details/index.html"><span>Cors</span><wbr><span>Issue</span><wbr><span><span>Details</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1809272253%2FClasslikes%2F474703126"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":cdp:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><div class="block"><div class="block"><span class="token annotation builtin">@</span><span data-unresolved-link="kotlinx.serialization/Serializable///PointingToDeclaration/"><span class="token annotation builtin">Serializable</span></span></div></div><span class="token keyword">data </span><span class="token keyword">class </span><a href="-cors-issue-details/index.html">CorsIssueDetails</a><span class="token punctuation">(</span><span class="parameters "><span class="parameter "><span class="token keyword">val </span>corsErrorStatus<span class="token operator">: </span><a href="../-network/-cors-error-status/index.html">Network.CorsErrorStatus</a><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>isWarning<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-boolean/index.html">Boolean</a><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>request<span class="token operator">: </span><a href="-affected-request/index.html">Audits.AffectedRequest</a><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>location<span class="token operator">: </span><a href="-source-code-location/index.html">Audits.SourceCodeLocation</a><span class="token operator">?</span><span class="token operator"> = </span>null<span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>initiatorOrigin<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a><span class="token operator">?</span><span class="token operator"> = </span>null<span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>resourceIPAddressSpace<span class="token operator">: </span><a href="../-network/-i-p-address-space/index.html">Network.IPAddressSpace</a><span class="token operator">?</span><span class="token operator"> = </span>null<span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>clientSecurityState<span class="token operator">: </span><a href="../-network/-client-security-state/index.html">Network.ClientSecurityState</a><span class="token operator">?</span><span class="token operator"> = </span>null</span></span><span class="token punctuation">)</span></div><div class="brief "><p class="paragraph">Details for a CORS related issue, e.g. a warning or error related to CORS RFC1918 enforcement.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1481107054%2FClasslikes%2F474703126" anchor-label="DeprecationIssueDetails" id="-1481107054%2FClasslikes%2F474703126" data-filterable-set=":cdp:dokkaHtmlPartial/commonMain"></a>
+          <div class="table-row" data-filterable-current=":cdp:dokkaHtmlPartial/commonMain" data-filterable-set=":cdp:dokkaHtmlPartial/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-deprecation-issue-details/index.html"><span>Deprecation</span><wbr><span>Issue</span><wbr><span><span>Details</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1481107054%2FClasslikes%2F474703126"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":cdp:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><div class="block"><div class="block"><span class="token annotation builtin">@</span><span data-unresolved-link="kotlinx.serialization/Serializable///PointingToDeclaration/"><span class="token annotation builtin">Serializable</span></span></div></div><span class="token keyword">data </span><span class="token keyword">class </span><a href="-deprecation-issue-details/index.html">DeprecationIssueDetails</a><span class="token punctuation">(</span><span class="parameters "><span class="parameter "><span class="token keyword">val </span>affectedFrame<span class="token operator">: </span><a href="-affected-frame/index.html">Audits.AffectedFrame</a><span class="token operator">?</span><span class="token operator"> = </span>null<span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>sourceCodeLocation<span class="token operator">: </span><a href="-source-code-location/index.html">Audits.SourceCodeLocation</a><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>type<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a></span></span><span class="token punctuation">)</span></div><div class="brief "><p class="paragraph">This issue tracks information needed to print a deprecation message. https://source.chromium.org/chromium/chromium/src/+/main:third_party/blink/renderer/core/frame/third_party/blink/renderer/core/frame/deprecation/README.md</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1477859121%2FClasslikes%2F474703126" anchor-label="FailedRequestInfo" id="-1477859121%2FClasslikes%2F474703126" data-filterable-set=":cdp:dokkaHtmlPartial/commonMain"></a>
+          <div class="table-row" data-filterable-current=":cdp:dokkaHtmlPartial/commonMain" data-filterable-set=":cdp:dokkaHtmlPartial/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-failed-request-info/index.html"><span>Failed</span><wbr><span>Request</span><wbr><span><span>Info</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1477859121%2FClasslikes%2F474703126"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":cdp:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><div class="block"><div class="block"><span class="token annotation builtin">@</span><span data-unresolved-link="kotlinx.serialization/Serializable///PointingToDeclaration/"><span class="token annotation builtin">Serializable</span></span></div></div><span class="token keyword">data </span><span class="token keyword">class </span><a href="-failed-request-info/index.html">FailedRequestInfo</a><span class="token punctuation">(</span><span class="parameters "><span class="parameter "><span class="token keyword">val </span>url<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>failureMessage<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>requestId<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a><span class="token operator">?</span><span class="token operator"> = </span>null</span></span><span class="token punctuation">)</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="917809159%2FClasslikes%2F474703126" anchor-label="FederatedAuthRequestIssueDetails" id="917809159%2FClasslikes%2F474703126" data-filterable-set=":cdp:dokkaHtmlPartial/commonMain"></a>
+          <div class="table-row" data-filterable-current=":cdp:dokkaHtmlPartial/commonMain" data-filterable-set=":cdp:dokkaHtmlPartial/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-federated-auth-request-issue-details/index.html"><span>Federated</span><wbr><span>Auth</span><wbr><span>Request</span><wbr><span>Issue</span><wbr><span><span>Details</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="917809159%2FClasslikes%2F474703126"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":cdp:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><div class="block"><div class="block"><span class="token annotation builtin">@</span><span data-unresolved-link="kotlinx.serialization/Serializable///PointingToDeclaration/"><span class="token annotation builtin">Serializable</span></span></div></div><span class="token keyword">data </span><span class="token keyword">class </span><a href="-federated-auth-request-issue-details/index.html">FederatedAuthRequestIssueDetails</a><span class="token punctuation">(</span><span class="parameters "><span class="parameter "><span class="token keyword">val </span>federatedAuthRequestIssueReason<span class="token operator">: </span><a href="-federated-auth-request-issue-reason/index.html">Audits.FederatedAuthRequestIssueReason</a></span></span><span class="token punctuation">)</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-190224491%2FClasslikes%2F474703126" anchor-label="FederatedAuthRequestIssueReason" id="-190224491%2FClasslikes%2F474703126" data-filterable-set=":cdp:dokkaHtmlPartial/commonMain"></a>
+          <div class="table-row" data-filterable-current=":cdp:dokkaHtmlPartial/commonMain" data-filterable-set=":cdp:dokkaHtmlPartial/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-federated-auth-request-issue-reason/index.html"><span>Federated</span><wbr><span>Auth</span><wbr><span>Request</span><wbr><span>Issue</span><wbr><span><span>Reason</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-190224491%2FClasslikes%2F474703126"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":cdp:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><div class="block"><div class="block"><span class="token annotation builtin">@</span><span data-unresolved-link="kotlinx.serialization/Serializable///PointingToDeclaration/"><span class="token annotation builtin">Serializable</span></span></div></div><span class="token keyword">enum </span><a href="-federated-auth-request-issue-reason/index.html">FederatedAuthRequestIssueReason</a> : <a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-enum/index.html">Enum</a><span class="token operator">&lt;</span><a href="-federated-auth-request-issue-reason/index.html">Audits.FederatedAuthRequestIssueReason</a><span class="token operator">&gt; </span></div><div class="brief "><p class="paragraph">Represents the failure reason when a federated authentication reason fails. Should be updated alongside RequestIdTokenStatus in third_party/blink/public/mojom/devtools/inspector_issue.mojom to include all cases except for success.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-2006002752%2FClasslikes%2F474703126" anchor-label="FederatedAuthUserInfoRequestIssueDetails" id="-2006002752%2FClasslikes%2F474703126" data-filterable-set=":cdp:dokkaHtmlPartial/commonMain"></a>
+          <div class="table-row" data-filterable-current=":cdp:dokkaHtmlPartial/commonMain" data-filterable-set=":cdp:dokkaHtmlPartial/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-federated-auth-user-info-request-issue-details/index.html"><span>Federated</span><wbr><span>Auth</span><wbr><span>User</span><wbr><span>Info</span><wbr><span>Request</span><wbr><span>Issue</span><wbr><span><span>Details</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-2006002752%2FClasslikes%2F474703126"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":cdp:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><div class="block"><div class="block"><span class="token annotation builtin">@</span><span data-unresolved-link="kotlinx.serialization/Serializable///PointingToDeclaration/"><span class="token annotation builtin">Serializable</span></span></div></div><span class="token keyword">data </span><span class="token keyword">class </span><a href="-federated-auth-user-info-request-issue-details/index.html">FederatedAuthUserInfoRequestIssueDetails</a><span class="token punctuation">(</span><span class="parameters "><span class="parameter "><span class="token keyword">val </span>federatedAuthUserInfoRequestIssueReason<span class="token operator">: </span><a href="-federated-auth-user-info-request-issue-reason/index.html">Audits.FederatedAuthUserInfoRequestIssueReason</a></span></span><span class="token punctuation">)</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-7446340%2FClasslikes%2F474703126" anchor-label="FederatedAuthUserInfoRequestIssueReason" id="-7446340%2FClasslikes%2F474703126" data-filterable-set=":cdp:dokkaHtmlPartial/commonMain"></a>
+          <div class="table-row" data-filterable-current=":cdp:dokkaHtmlPartial/commonMain" data-filterable-set=":cdp:dokkaHtmlPartial/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-federated-auth-user-info-request-issue-reason/index.html"><span>Federated</span><wbr><span>Auth</span><wbr><span>User</span><wbr><span>Info</span><wbr><span>Request</span><wbr><span>Issue</span><wbr><span><span>Reason</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-7446340%2FClasslikes%2F474703126"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":cdp:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><div class="block"><div class="block"><span class="token annotation builtin">@</span><span data-unresolved-link="kotlinx.serialization/Serializable///PointingToDeclaration/"><span class="token annotation builtin">Serializable</span></span></div></div><span class="token keyword">enum </span><a href="-federated-auth-user-info-request-issue-reason/index.html">FederatedAuthUserInfoRequestIssueReason</a> : <a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-enum/index.html">Enum</a><span class="token operator">&lt;</span><a href="-federated-auth-user-info-request-issue-reason/index.html">Audits.FederatedAuthUserInfoRequestIssueReason</a><span class="token operator">&gt; </span></div><div class="brief "><p class="paragraph">Represents the failure reason when a getUserInfo() call fails. Should be updated alongside FederatedAuthUserInfoRequestResult in third_party/blink/public/mojom/devtools/inspector_issue.mojom.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-765038065%2FClasslikes%2F474703126" anchor-label="GenericIssueDetails" id="-765038065%2FClasslikes%2F474703126" data-filterable-set=":cdp:dokkaHtmlPartial/commonMain"></a>
+          <div class="table-row" data-filterable-current=":cdp:dokkaHtmlPartial/commonMain" data-filterable-set=":cdp:dokkaHtmlPartial/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-generic-issue-details/index.html"><span>Generic</span><wbr><span>Issue</span><wbr><span><span>Details</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-765038065%2FClasslikes%2F474703126"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":cdp:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><div class="block"><div class="block"><span class="token annotation builtin">@</span><span data-unresolved-link="kotlinx.serialization/Serializable///PointingToDeclaration/"><span class="token annotation builtin">Serializable</span></span></div></div><span class="token keyword">data </span><span class="token keyword">class </span><a href="-generic-issue-details/index.html">GenericIssueDetails</a><span class="token punctuation">(</span><span class="parameters "><span class="parameter "><span class="token keyword">val </span>errorType<span class="token operator">: </span><a href="-generic-issue-error-type/index.html">Audits.GenericIssueErrorType</a><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>frameId<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a><span class="token operator">?</span><span class="token operator"> = </span>null<span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>violatingNodeId<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-int/index.html">Int</a><span class="token operator">?</span><span class="token operator"> = </span>null<span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>violatingNodeAttribute<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a><span class="token operator">?</span><span class="token operator"> = </span>null<span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>request<span class="token operator">: </span><a href="-affected-request/index.html">Audits.AffectedRequest</a><span class="token operator">?</span><span class="token operator"> = </span>null</span></span><span class="token punctuation">)</span></div><div class="brief "><p class="paragraph">Depending on the concrete errorType, different properties are set.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-219308305%2FClasslikes%2F474703126" anchor-label="GenericIssueErrorType" id="-219308305%2FClasslikes%2F474703126" data-filterable-set=":cdp:dokkaHtmlPartial/commonMain"></a>
+          <div class="table-row" data-filterable-current=":cdp:dokkaHtmlPartial/commonMain" data-filterable-set=":cdp:dokkaHtmlPartial/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-generic-issue-error-type/index.html"><span>Generic</span><wbr><span>Issue</span><wbr><span>Error</span><wbr><span><span>Type</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-219308305%2FClasslikes%2F474703126"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":cdp:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><div class="block"><div class="block"><span class="token annotation builtin">@</span><span data-unresolved-link="kotlinx.serialization/Serializable///PointingToDeclaration/"><span class="token annotation builtin">Serializable</span></span></div></div><span class="token keyword">enum </span><a href="-generic-issue-error-type/index.html">GenericIssueErrorType</a> : <a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-enum/index.html">Enum</a><span class="token operator">&lt;</span><a href="-generic-issue-error-type/index.html">Audits.GenericIssueErrorType</a><span class="token operator">&gt; </span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-691996097%2FClasslikes%2F474703126" anchor-label="GetEncodedResponseParameter" id="-691996097%2FClasslikes%2F474703126" data-filterable-set=":cdp:dokkaHtmlPartial/commonMain"></a>
+          <div class="table-row" data-filterable-current=":cdp:dokkaHtmlPartial/commonMain" data-filterable-set=":cdp:dokkaHtmlPartial/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-get-encoded-response-parameter/index.html"><span>Get</span><wbr><span>Encoded</span><wbr><span>Response</span><wbr><span><span>Parameter</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-691996097%2FClasslikes%2F474703126"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":cdp:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><div class="block"><div class="block"><span class="token annotation builtin">@</span><span data-unresolved-link="kotlinx.serialization/Serializable///PointingToDeclaration/"><span class="token annotation builtin">Serializable</span></span></div></div><span class="token keyword">data </span><span class="token keyword">class </span><a href="-get-encoded-response-parameter/index.html">GetEncodedResponseParameter</a><span class="token punctuation">(</span><span class="parameters "><span class="parameter "><span class="token keyword">val </span>requestId<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>encoding<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>quality<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-double/index.html">Double</a><span class="token operator">?</span><span class="token operator"> = </span>null<span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>sizeOnly<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-boolean/index.html">Boolean</a><span class="token operator">?</span><span class="token operator"> = </span>null</span></span><span class="token punctuation">)</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1911174858%2FClasslikes%2F474703126" anchor-label="GetEncodedResponseReturn" id="1911174858%2FClasslikes%2F474703126" data-filterable-set=":cdp:dokkaHtmlPartial/commonMain"></a>
+          <div class="table-row" data-filterable-current=":cdp:dokkaHtmlPartial/commonMain" data-filterable-set=":cdp:dokkaHtmlPartial/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-get-encoded-response-return/index.html"><span>Get</span><wbr><span>Encoded</span><wbr><span>Response</span><wbr><span><span>Return</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1911174858%2FClasslikes%2F474703126"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":cdp:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><div class="block"><div class="block"><span class="token annotation builtin">@</span><span data-unresolved-link="kotlinx.serialization/Serializable///PointingToDeclaration/"><span class="token annotation builtin">Serializable</span></span></div></div><span class="token keyword">data </span><span class="token keyword">class </span><a href="-get-encoded-response-return/index.html">GetEncodedResponseReturn</a><span class="token punctuation">(</span><span class="parameters "><span class="parameter "><span class="token keyword">val </span>body<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a><span class="token operator">?</span><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>originalSize<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-int/index.html">Int</a><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>encodedSize<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-int/index.html">Int</a></span></span><span class="token punctuation">)</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-422603652%2FClasslikes%2F474703126" anchor-label="HeavyAdIssueDetails" id="-422603652%2FClasslikes%2F474703126" data-filterable-set=":cdp:dokkaHtmlPartial/commonMain"></a>
+          <div class="table-row" data-filterable-current=":cdp:dokkaHtmlPartial/commonMain" data-filterable-set=":cdp:dokkaHtmlPartial/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-heavy-ad-issue-details/index.html"><span>Heavy</span><wbr><span>Ad</span><wbr><span>Issue</span><wbr><span><span>Details</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-422603652%2FClasslikes%2F474703126"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":cdp:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><div class="block"><div class="block"><span class="token annotation builtin">@</span><span data-unresolved-link="kotlinx.serialization/Serializable///PointingToDeclaration/"><span class="token annotation builtin">Serializable</span></span></div></div><span class="token keyword">data </span><span class="token keyword">class </span><a href="-heavy-ad-issue-details/index.html">HeavyAdIssueDetails</a><span class="token punctuation">(</span><span class="parameters "><span class="parameter "><span class="token keyword">val </span>resolution<span class="token operator">: </span><a href="-heavy-ad-resolution-status/index.html">Audits.HeavyAdResolutionStatus</a><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>reason<span class="token operator">: </span><a href="-heavy-ad-reason/index.html">Audits.HeavyAdReason</a><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>frame<span class="token operator">: </span><a href="-affected-frame/index.html">Audits.AffectedFrame</a></span></span><span class="token punctuation">)</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-961535807%2FClasslikes%2F474703126" anchor-label="HeavyAdReason" id="-961535807%2FClasslikes%2F474703126" data-filterable-set=":cdp:dokkaHtmlPartial/commonMain"></a>
+          <div class="table-row" data-filterable-current=":cdp:dokkaHtmlPartial/commonMain" data-filterable-set=":cdp:dokkaHtmlPartial/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-heavy-ad-reason/index.html"><span>Heavy</span><wbr><span>Ad</span><wbr><span><span>Reason</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-961535807%2FClasslikes%2F474703126"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":cdp:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><div class="block"><div class="block"><span class="token annotation builtin">@</span><span data-unresolved-link="kotlinx.serialization/Serializable///PointingToDeclaration/"><span class="token annotation builtin">Serializable</span></span></div></div><span class="token keyword">enum </span><a href="-heavy-ad-reason/index.html">HeavyAdReason</a> : <a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-enum/index.html">Enum</a><span class="token operator">&lt;</span><a href="-heavy-ad-reason/index.html">Audits.HeavyAdReason</a><span class="token operator">&gt; </span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1114696825%2FClasslikes%2F474703126" anchor-label="HeavyAdResolutionStatus" id="-1114696825%2FClasslikes%2F474703126" data-filterable-set=":cdp:dokkaHtmlPartial/commonMain"></a>
+          <div class="table-row" data-filterable-current=":cdp:dokkaHtmlPartial/commonMain" data-filterable-set=":cdp:dokkaHtmlPartial/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-heavy-ad-resolution-status/index.html"><span>Heavy</span><wbr><span>Ad</span><wbr><span>Resolution</span><wbr><span><span>Status</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1114696825%2FClasslikes%2F474703126"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":cdp:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><div class="block"><div class="block"><span class="token annotation builtin">@</span><span data-unresolved-link="kotlinx.serialization/Serializable///PointingToDeclaration/"><span class="token annotation builtin">Serializable</span></span></div></div><span class="token keyword">enum </span><a href="-heavy-ad-resolution-status/index.html">HeavyAdResolutionStatus</a> : <a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-enum/index.html">Enum</a><span class="token operator">&lt;</span><a href="-heavy-ad-resolution-status/index.html">Audits.HeavyAdResolutionStatus</a><span class="token operator">&gt; </span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-2110823663%2FClasslikes%2F474703126" anchor-label="InspectorIssue" id="-2110823663%2FClasslikes%2F474703126" data-filterable-set=":cdp:dokkaHtmlPartial/commonMain"></a>
+          <div class="table-row" data-filterable-current=":cdp:dokkaHtmlPartial/commonMain" data-filterable-set=":cdp:dokkaHtmlPartial/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-inspector-issue/index.html"><span>Inspector</span><wbr><span><span>Issue</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-2110823663%2FClasslikes%2F474703126"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":cdp:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><div class="block"><div class="block"><span class="token annotation builtin">@</span><span data-unresolved-link="kotlinx.serialization/Serializable///PointingToDeclaration/"><span class="token annotation builtin">Serializable</span></span></div></div><span class="token keyword">data </span><span class="token keyword">class </span><a href="-inspector-issue/index.html">InspectorIssue</a><span class="token punctuation">(</span><span class="parameters "><span class="parameter "><span class="token keyword">val </span>code<span class="token operator">: </span><a href="-inspector-issue-code/index.html">Audits.InspectorIssueCode</a><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>details<span class="token operator">: </span><a href="-inspector-issue-details/index.html">Audits.InspectorIssueDetails</a><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>issueId<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a><span class="token operator">?</span><span class="token operator"> = </span>null</span></span><span class="token punctuation">)</span></div><div class="brief "><p class="paragraph">An inspector issue reported from the back-end.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-435074652%2FClasslikes%2F474703126" anchor-label="InspectorIssueCode" id="-435074652%2FClasslikes%2F474703126" data-filterable-set=":cdp:dokkaHtmlPartial/commonMain"></a>
+          <div class="table-row" data-filterable-current=":cdp:dokkaHtmlPartial/commonMain" data-filterable-set=":cdp:dokkaHtmlPartial/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-inspector-issue-code/index.html"><span>Inspector</span><wbr><span>Issue</span><wbr><span><span>Code</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-435074652%2FClasslikes%2F474703126"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":cdp:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><div class="block"><div class="block"><span class="token annotation builtin">@</span><span data-unresolved-link="kotlinx.serialization/Serializable///PointingToDeclaration/"><span class="token annotation builtin">Serializable</span></span></div></div><span class="token keyword">enum </span><a href="-inspector-issue-code/index.html">InspectorIssueCode</a> : <a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-enum/index.html">Enum</a><span class="token operator">&lt;</span><a href="-inspector-issue-code/index.html">Audits.InspectorIssueCode</a><span class="token operator">&gt; </span></div><div class="brief "><p class="paragraph">A unique identifier for the type of issue. Each type may use one of the optional fields in InspectorIssueDetails to convey more specific information about the kind of issue.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1746809489%2FClasslikes%2F474703126" anchor-label="InspectorIssueDetails" id="-1746809489%2FClasslikes%2F474703126" data-filterable-set=":cdp:dokkaHtmlPartial/commonMain"></a>
+          <div class="table-row" data-filterable-current=":cdp:dokkaHtmlPartial/commonMain" data-filterable-set=":cdp:dokkaHtmlPartial/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-inspector-issue-details/index.html"><span>Inspector</span><wbr><span>Issue</span><wbr><span><span>Details</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1746809489%2FClasslikes%2F474703126"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":cdp:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><div class="block"><div class="block"><span class="token annotation builtin">@</span><span data-unresolved-link="kotlinx.serialization/Serializable///PointingToDeclaration/"><span class="token annotation builtin">Serializable</span></span></div></div><span class="token keyword">data </span><span class="token keyword">class </span><a href="-inspector-issue-details/index.html">InspectorIssueDetails</a><span class="token punctuation">(</span><span class="parameters "><span class="parameter "><span class="token keyword">val </span>cookieIssueDetails<span class="token operator">: </span><a href="-cookie-issue-details/index.html">Audits.CookieIssueDetails</a><span class="token operator">?</span><span class="token operator"> = </span>null<span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>mixedContentIssueDetails<span class="token operator">: </span><a href="-mixed-content-issue-details/index.html">Audits.MixedContentIssueDetails</a><span class="token operator">?</span><span class="token operator"> = </span>null<span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>blockedByResponseIssueDetails<span class="token operator">: </span><a href="-blocked-by-response-issue-details/index.html">Audits.BlockedByResponseIssueDetails</a><span class="token operator">?</span><span class="token operator"> = </span>null<span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>heavyAdIssueDetails<span class="token operator">: </span><a href="-heavy-ad-issue-details/index.html">Audits.HeavyAdIssueDetails</a><span class="token operator">?</span><span class="token operator"> = </span>null<span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>contentSecurityPolicyIssueDetails<span class="token operator">: </span><a href="-content-security-policy-issue-details/index.html">Audits.ContentSecurityPolicyIssueDetails</a><span class="token operator">?</span><span class="token operator"> = </span>null<span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>sharedArrayBufferIssueDetails<span class="token operator">: </span><a href="-shared-array-buffer-issue-details/index.html">Audits.SharedArrayBufferIssueDetails</a><span class="token operator">?</span><span class="token operator"> = </span>null<span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>lowTextContrastIssueDetails<span class="token operator">: </span><a href="-low-text-contrast-issue-details/index.html">Audits.LowTextContrastIssueDetails</a><span class="token operator">?</span><span class="token operator"> = </span>null<span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>corsIssueDetails<span class="token operator">: </span><a href="-cors-issue-details/index.html">Audits.CorsIssueDetails</a><span class="token operator">?</span><span class="token operator"> = </span>null<span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>attributionReportingIssueDetails<span class="token operator">: </span><a href="-attribution-reporting-issue-details/index.html">Audits.AttributionReportingIssueDetails</a><span class="token operator">?</span><span class="token operator"> = </span>null<span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>quirksModeIssueDetails<span class="token operator">: </span><a href="-quirks-mode-issue-details/index.html">Audits.QuirksModeIssueDetails</a><span class="token operator">?</span><span class="token operator"> = </span>null<span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>navigatorUserAgentIssueDetails<span class="token operator">: </span><a href="-navigator-user-agent-issue-details/index.html">Audits.NavigatorUserAgentIssueDetails</a><span class="token operator">?</span><span class="token operator"> = </span>null<span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>genericIssueDetails<span class="token operator">: </span><a href="-generic-issue-details/index.html">Audits.GenericIssueDetails</a><span class="token operator">?</span><span class="token operator"> = </span>null<span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>deprecationIssueDetails<span class="token operator">: </span><a href="-deprecation-issue-details/index.html">Audits.DeprecationIssueDetails</a><span class="token operator">?</span><span class="token operator"> = </span>null<span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>clientHintIssueDetails<span class="token operator">: </span><a href="-client-hint-issue-details/index.html">Audits.ClientHintIssueDetails</a><span class="token operator">?</span><span class="token operator"> = </span>null<span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>federatedAuthRequestIssueDetails<span class="token operator">: </span><a href="-federated-auth-request-issue-details/index.html">Audits.FederatedAuthRequestIssueDetails</a><span class="token operator">?</span><span class="token operator"> = </span>null<span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>bounceTrackingIssueDetails<span class="token operator">: </span><a href="-bounce-tracking-issue-details/index.html">Audits.BounceTrackingIssueDetails</a><span class="token operator">?</span><span class="token operator"> = </span>null<span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>cookieDeprecationMetadataIssueDetails<span class="token operator">: </span><a href="-cookie-deprecation-metadata-issue-details/index.html">Audits.CookieDeprecationMetadataIssueDetails</a><span class="token operator">?</span><span class="token operator"> = </span>null<span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>stylesheetLoadingIssueDetails<span class="token operator">: </span><a href="-stylesheet-loading-issue-details/index.html">Audits.StylesheetLoadingIssueDetails</a><span class="token operator">?</span><span class="token operator"> = </span>null<span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>propertyRuleIssueDetails<span class="token operator">: </span><a href="-property-rule-issue-details/index.html">Audits.PropertyRuleIssueDetails</a><span class="token operator">?</span><span class="token operator"> = </span>null<span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>federatedAuthUserInfoRequestIssueDetails<span class="token operator">: </span><a href="-federated-auth-user-info-request-issue-details/index.html">Audits.FederatedAuthUserInfoRequestIssueDetails</a><span class="token operator">?</span><span class="token operator"> = </span>null</span></span><span class="token punctuation">)</span></div><div class="brief "><p class="paragraph">This struct holds a list of optional fields with additional information specific to the kind of issue. When adding a new issue code, please also add a new optional field to this type.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-863681747%2FClasslikes%2F474703126" anchor-label="IssueAddedParameter" id="-863681747%2FClasslikes%2F474703126" data-filterable-set=":cdp:dokkaHtmlPartial/commonMain"></a>
+          <div class="table-row" data-filterable-current=":cdp:dokkaHtmlPartial/commonMain" data-filterable-set=":cdp:dokkaHtmlPartial/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-issue-added-parameter/index.html"><span>Issue</span><wbr><span>Added</span><wbr><span><span>Parameter</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-863681747%2FClasslikes%2F474703126"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":cdp:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><div class="block"><div class="block"><span class="token annotation builtin">@</span><span data-unresolved-link="kotlinx.serialization/Serializable///PointingToDeclaration/"><span class="token annotation builtin">Serializable</span></span></div></div><span class="token keyword">data </span><span class="token keyword">class </span><a href="-issue-added-parameter/index.html">IssueAddedParameter</a><span class="token punctuation">(</span><span class="parameters "><span class="parameter "><span class="token keyword">val </span>issue<span class="token operator">: </span><a href="-inspector-issue/index.html">Audits.InspectorIssue</a></span></span><span class="token punctuation">)</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1441949859%2FClasslikes%2F474703126" anchor-label="LowTextContrastIssueDetails" id="1441949859%2FClasslikes%2F474703126" data-filterable-set=":cdp:dokkaHtmlPartial/commonMain"></a>
+          <div class="table-row" data-filterable-current=":cdp:dokkaHtmlPartial/commonMain" data-filterable-set=":cdp:dokkaHtmlPartial/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-low-text-contrast-issue-details/index.html"><span>Low</span><wbr><span>Text</span><wbr><span>Contrast</span><wbr><span>Issue</span><wbr><span><span>Details</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1441949859%2FClasslikes%2F474703126"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":cdp:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><div class="block"><div class="block"><span class="token annotation builtin">@</span><span data-unresolved-link="kotlinx.serialization/Serializable///PointingToDeclaration/"><span class="token annotation builtin">Serializable</span></span></div></div><span class="token keyword">data </span><span class="token keyword">class </span><a href="-low-text-contrast-issue-details/index.html">LowTextContrastIssueDetails</a><span class="token punctuation">(</span><span class="parameters "><span class="parameter "><span class="token keyword">val </span>violatingNodeId<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-int/index.html">Int</a><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>violatingNodeSelector<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>contrastRatio<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-double/index.html">Double</a><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>thresholdAA<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-double/index.html">Double</a><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>thresholdAAA<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-double/index.html">Double</a><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>fontSize<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>fontWeight<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a></span></span><span class="token punctuation">)</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1781484044%2FClasslikes%2F474703126" anchor-label="MixedContentIssueDetails" id="1781484044%2FClasslikes%2F474703126" data-filterable-set=":cdp:dokkaHtmlPartial/commonMain"></a>
+          <div class="table-row" data-filterable-current=":cdp:dokkaHtmlPartial/commonMain" data-filterable-set=":cdp:dokkaHtmlPartial/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-mixed-content-issue-details/index.html"><span>Mixed</span><wbr><span>Content</span><wbr><span>Issue</span><wbr><span><span>Details</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1781484044%2FClasslikes%2F474703126"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":cdp:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><div class="block"><div class="block"><span class="token annotation builtin">@</span><span data-unresolved-link="kotlinx.serialization/Serializable///PointingToDeclaration/"><span class="token annotation builtin">Serializable</span></span></div></div><span class="token keyword">data </span><span class="token keyword">class </span><a href="-mixed-content-issue-details/index.html">MixedContentIssueDetails</a><span class="token punctuation">(</span><span class="parameters "><span class="parameter "><span class="token keyword">val </span>resourceType<span class="token operator">: </span><a href="-mixed-content-resource-type/index.html">Audits.MixedContentResourceType</a><span class="token operator">?</span><span class="token operator"> = </span>null<span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>resolutionStatus<span class="token operator">: </span><a href="-mixed-content-resolution-status/index.html">Audits.MixedContentResolutionStatus</a><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>insecureURL<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>mainResourceURL<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>request<span class="token operator">: </span><a href="-affected-request/index.html">Audits.AffectedRequest</a><span class="token operator">?</span><span class="token operator"> = </span>null<span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>frame<span class="token operator">: </span><a href="-affected-frame/index.html">Audits.AffectedFrame</a><span class="token operator">?</span><span class="token operator"> = </span>null</span></span><span class="token punctuation">)</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="2012840215%2FClasslikes%2F474703126" anchor-label="MixedContentResolutionStatus" id="2012840215%2FClasslikes%2F474703126" data-filterable-set=":cdp:dokkaHtmlPartial/commonMain"></a>
+          <div class="table-row" data-filterable-current=":cdp:dokkaHtmlPartial/commonMain" data-filterable-set=":cdp:dokkaHtmlPartial/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-mixed-content-resolution-status/index.html"><span>Mixed</span><wbr><span>Content</span><wbr><span>Resolution</span><wbr><span><span>Status</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="2012840215%2FClasslikes%2F474703126"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":cdp:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><div class="block"><div class="block"><span class="token annotation builtin">@</span><span data-unresolved-link="kotlinx.serialization/Serializable///PointingToDeclaration/"><span class="token annotation builtin">Serializable</span></span></div></div><span class="token keyword">enum </span><a href="-mixed-content-resolution-status/index.html">MixedContentResolutionStatus</a> : <a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-enum/index.html">Enum</a><span class="token operator">&lt;</span><a href="-mixed-content-resolution-status/index.html">Audits.MixedContentResolutionStatus</a><span class="token operator">&gt; </span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="847067565%2FClasslikes%2F474703126" anchor-label="MixedContentResourceType" id="847067565%2FClasslikes%2F474703126" data-filterable-set=":cdp:dokkaHtmlPartial/commonMain"></a>
+          <div class="table-row" data-filterable-current=":cdp:dokkaHtmlPartial/commonMain" data-filterable-set=":cdp:dokkaHtmlPartial/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-mixed-content-resource-type/index.html"><span>Mixed</span><wbr><span>Content</span><wbr><span>Resource</span><wbr><span><span>Type</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="847067565%2FClasslikes%2F474703126"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":cdp:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><div class="block"><div class="block"><span class="token annotation builtin">@</span><span data-unresolved-link="kotlinx.serialization/Serializable///PointingToDeclaration/"><span class="token annotation builtin">Serializable</span></span></div></div><span class="token keyword">enum </span><a href="-mixed-content-resource-type/index.html">MixedContentResourceType</a> : <a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-enum/index.html">Enum</a><span class="token operator">&lt;</span><a href="-mixed-content-resource-type/index.html">Audits.MixedContentResourceType</a><span class="token operator">&gt; </span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-372988345%2FClasslikes%2F474703126" anchor-label="NavigatorUserAgentIssueDetails" id="-372988345%2FClasslikes%2F474703126" data-filterable-set=":cdp:dokkaHtmlPartial/commonMain"></a>
+          <div class="table-row" data-filterable-current=":cdp:dokkaHtmlPartial/commonMain" data-filterable-set=":cdp:dokkaHtmlPartial/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-navigator-user-agent-issue-details/index.html"><span>Navigator</span><wbr><span>User</span><wbr><span>Agent</span><wbr><span>Issue</span><wbr><span><span>Details</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-372988345%2FClasslikes%2F474703126"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":cdp:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><div class="block"><div class="block"><span class="token annotation builtin">@</span><span data-unresolved-link="kotlinx.serialization/Serializable///PointingToDeclaration/"><span class="token annotation builtin">Serializable</span></span></div></div><span class="token keyword">data </span><span class="token keyword">class </span><a href="-navigator-user-agent-issue-details/index.html">NavigatorUserAgentIssueDetails</a><span class="token punctuation">(</span><span class="parameters "><span class="parameter "><span class="token keyword">val </span>url<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>location<span class="token operator">: </span><a href="-source-code-location/index.html">Audits.SourceCodeLocation</a><span class="token operator">?</span><span class="token operator"> = </span>null</span></span><span class="token punctuation">)</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-164868231%2FClasslikes%2F474703126" anchor-label="PropertyRuleIssueDetails" id="-164868231%2FClasslikes%2F474703126" data-filterable-set=":cdp:dokkaHtmlPartial/commonMain"></a>
+          <div class="table-row" data-filterable-current=":cdp:dokkaHtmlPartial/commonMain" data-filterable-set=":cdp:dokkaHtmlPartial/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-property-rule-issue-details/index.html"><span>Property</span><wbr><span>Rule</span><wbr><span>Issue</span><wbr><span><span>Details</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-164868231%2FClasslikes%2F474703126"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":cdp:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><div class="block"><div class="block"><span class="token annotation builtin">@</span><span data-unresolved-link="kotlinx.serialization/Serializable///PointingToDeclaration/"><span class="token annotation builtin">Serializable</span></span></div></div><span class="token keyword">data </span><span class="token keyword">class </span><a href="-property-rule-issue-details/index.html">PropertyRuleIssueDetails</a><span class="token punctuation">(</span><span class="parameters "><span class="parameter "><span class="token keyword">val </span>sourceCodeLocation<span class="token operator">: </span><a href="-source-code-location/index.html">Audits.SourceCodeLocation</a><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>propertyRuleIssueReason<span class="token operator">: </span><a href="-property-rule-issue-reason/index.html">Audits.PropertyRuleIssueReason</a><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>propertyValue<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a><span class="token operator">?</span><span class="token operator"> = </span>null</span></span><span class="token punctuation">)</span></div><div class="brief "><p class="paragraph">This issue warns about errors in property rules that lead to property registrations being ignored.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1194980893%2FClasslikes%2F474703126" anchor-label="PropertyRuleIssueReason" id="-1194980893%2FClasslikes%2F474703126" data-filterable-set=":cdp:dokkaHtmlPartial/commonMain"></a>
+          <div class="table-row" data-filterable-current=":cdp:dokkaHtmlPartial/commonMain" data-filterable-set=":cdp:dokkaHtmlPartial/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-property-rule-issue-reason/index.html"><span>Property</span><wbr><span>Rule</span><wbr><span>Issue</span><wbr><span><span>Reason</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1194980893%2FClasslikes%2F474703126"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":cdp:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><div class="block"><div class="block"><span class="token annotation builtin">@</span><span data-unresolved-link="kotlinx.serialization/Serializable///PointingToDeclaration/"><span class="token annotation builtin">Serializable</span></span></div></div><span class="token keyword">enum </span><a href="-property-rule-issue-reason/index.html">PropertyRuleIssueReason</a> : <a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-enum/index.html">Enum</a><span class="token operator">&lt;</span><a href="-property-rule-issue-reason/index.html">Audits.PropertyRuleIssueReason</a><span class="token operator">&gt; </span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1140245266%2FClasslikes%2F474703126" anchor-label="QuirksModeIssueDetails" id="1140245266%2FClasslikes%2F474703126" data-filterable-set=":cdp:dokkaHtmlPartial/commonMain"></a>
+          <div class="table-row" data-filterable-current=":cdp:dokkaHtmlPartial/commonMain" data-filterable-set=":cdp:dokkaHtmlPartial/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-quirks-mode-issue-details/index.html"><span>Quirks</span><wbr><span>Mode</span><wbr><span>Issue</span><wbr><span><span>Details</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1140245266%2FClasslikes%2F474703126"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":cdp:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><div class="block"><div class="block"><span class="token annotation builtin">@</span><span data-unresolved-link="kotlinx.serialization/Serializable///PointingToDeclaration/"><span class="token annotation builtin">Serializable</span></span></div></div><span class="token keyword">data </span><span class="token keyword">class </span><a href="-quirks-mode-issue-details/index.html">QuirksModeIssueDetails</a><span class="token punctuation">(</span><span class="parameters "><span class="parameter "><span class="token keyword">val </span>isLimitedQuirksMode<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-boolean/index.html">Boolean</a><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>documentNodeId<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-int/index.html">Int</a><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>url<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>frameId<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>loaderId<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a></span></span><span class="token punctuation">)</span></div><div class="brief "><p class="paragraph">Details for issues about documents in Quirks Mode or Limited Quirks Mode that affects page layouting.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1576916430%2FClasslikes%2F474703126" anchor-label="SharedArrayBufferIssueDetails" id="-1576916430%2FClasslikes%2F474703126" data-filterable-set=":cdp:dokkaHtmlPartial/commonMain"></a>
+          <div class="table-row" data-filterable-current=":cdp:dokkaHtmlPartial/commonMain" data-filterable-set=":cdp:dokkaHtmlPartial/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-shared-array-buffer-issue-details/index.html"><span>Shared</span><wbr><span>Array</span><wbr><span>Buffer</span><wbr><span>Issue</span><wbr><span><span>Details</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1576916430%2FClasslikes%2F474703126"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":cdp:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><div class="block"><div class="block"><span class="token annotation builtin">@</span><span data-unresolved-link="kotlinx.serialization/Serializable///PointingToDeclaration/"><span class="token annotation builtin">Serializable</span></span></div></div><span class="token keyword">data </span><span class="token keyword">class </span><a href="-shared-array-buffer-issue-details/index.html">SharedArrayBufferIssueDetails</a><span class="token punctuation">(</span><span class="parameters "><span class="parameter "><span class="token keyword">val </span>sourceCodeLocation<span class="token operator">: </span><a href="-source-code-location/index.html">Audits.SourceCodeLocation</a><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>isWarning<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-boolean/index.html">Boolean</a><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>type<span class="token operator">: </span><a href="-shared-array-buffer-issue-type/index.html">Audits.SharedArrayBufferIssueType</a></span></span><span class="token punctuation">)</span></div><div class="brief "><p class="paragraph">Details for a issue arising from an SAB being instantiated in, or transferred to a context that is not cross-origin isolated.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="415374100%2FClasslikes%2F474703126" anchor-label="SharedArrayBufferIssueType" id="415374100%2FClasslikes%2F474703126" data-filterable-set=":cdp:dokkaHtmlPartial/commonMain"></a>
+          <div class="table-row" data-filterable-current=":cdp:dokkaHtmlPartial/commonMain" data-filterable-set=":cdp:dokkaHtmlPartial/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-shared-array-buffer-issue-type/index.html"><span>Shared</span><wbr><span>Array</span><wbr><span>Buffer</span><wbr><span>Issue</span><wbr><span><span>Type</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="415374100%2FClasslikes%2F474703126"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":cdp:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><div class="block"><div class="block"><span class="token annotation builtin">@</span><span data-unresolved-link="kotlinx.serialization/Serializable///PointingToDeclaration/"><span class="token annotation builtin">Serializable</span></span></div></div><span class="token keyword">enum </span><a href="-shared-array-buffer-issue-type/index.html">SharedArrayBufferIssueType</a> : <a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-enum/index.html">Enum</a><span class="token operator">&lt;</span><a href="-shared-array-buffer-issue-type/index.html">Audits.SharedArrayBufferIssueType</a><span class="token operator">&gt; </span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="695770646%2FClasslikes%2F474703126" anchor-label="SourceCodeLocation" id="695770646%2FClasslikes%2F474703126" data-filterable-set=":cdp:dokkaHtmlPartial/commonMain"></a>
+          <div class="table-row" data-filterable-current=":cdp:dokkaHtmlPartial/commonMain" data-filterable-set=":cdp:dokkaHtmlPartial/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-source-code-location/index.html"><span>Source</span><wbr><span>Code</span><wbr><span><span>Location</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="695770646%2FClasslikes%2F474703126"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":cdp:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><div class="block"><div class="block"><span class="token annotation builtin">@</span><span data-unresolved-link="kotlinx.serialization/Serializable///PointingToDeclaration/"><span class="token annotation builtin">Serializable</span></span></div></div><span class="token keyword">data </span><span class="token keyword">class </span><a href="-source-code-location/index.html">SourceCodeLocation</a><span class="token punctuation">(</span><span class="parameters "><span class="parameter "><span class="token keyword">val </span>scriptId<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a><span class="token operator">?</span><span class="token operator"> = </span>null<span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>url<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>lineNumber<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-int/index.html">Int</a><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>columnNumber<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-int/index.html">Int</a></span></span><span class="token punctuation">)</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="436501944%2FClasslikes%2F474703126" anchor-label="StylesheetLoadingIssueDetails" id="436501944%2FClasslikes%2F474703126" data-filterable-set=":cdp:dokkaHtmlPartial/commonMain"></a>
+          <div class="table-row" data-filterable-current=":cdp:dokkaHtmlPartial/commonMain" data-filterable-set=":cdp:dokkaHtmlPartial/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-stylesheet-loading-issue-details/index.html"><span>Stylesheet</span><wbr><span>Loading</span><wbr><span>Issue</span><wbr><span><span>Details</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="436501944%2FClasslikes%2F474703126"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":cdp:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><div class="block"><div class="block"><span class="token annotation builtin">@</span><span data-unresolved-link="kotlinx.serialization/Serializable///PointingToDeclaration/"><span class="token annotation builtin">Serializable</span></span></div></div><span class="token keyword">data </span><span class="token keyword">class </span><a href="-stylesheet-loading-issue-details/index.html">StylesheetLoadingIssueDetails</a><span class="token punctuation">(</span><span class="parameters "><span class="parameter "><span class="token keyword">val </span>sourceCodeLocation<span class="token operator">: </span><a href="-source-code-location/index.html">Audits.SourceCodeLocation</a><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>styleSheetLoadingIssueReason<span class="token operator">: </span><a href="-style-sheet-loading-issue-reason/index.html">Audits.StyleSheetLoadingIssueReason</a><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>failedRequestInfo<span class="token operator">: </span><a href="-failed-request-info/index.html">Audits.FailedRequestInfo</a><span class="token operator">?</span><span class="token operator"> = </span>null</span></span><span class="token punctuation">)</span></div><div class="brief "><p class="paragraph">This issue warns when a referenced stylesheet couldn't be loaded.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1187732452%2FClasslikes%2F474703126" anchor-label="StyleSheetLoadingIssueReason" id="1187732452%2FClasslikes%2F474703126" data-filterable-set=":cdp:dokkaHtmlPartial/commonMain"></a>
+          <div class="table-row" data-filterable-current=":cdp:dokkaHtmlPartial/commonMain" data-filterable-set=":cdp:dokkaHtmlPartial/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-style-sheet-loading-issue-reason/index.html"><span>Style</span><wbr><span>Sheet</span><wbr><span>Loading</span><wbr><span>Issue</span><wbr><span><span>Reason</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1187732452%2FClasslikes%2F474703126"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":cdp:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><div class="block"><div class="block"><span class="token annotation builtin">@</span><span data-unresolved-link="kotlinx.serialization/Serializable///PointingToDeclaration/"><span class="token annotation builtin">Serializable</span></span></div></div><span class="token keyword">enum </span><a href="-style-sheet-loading-issue-reason/index.html">StyleSheetLoadingIssueReason</a> : <a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-enum/index.html">Enum</a><span class="token operator">&lt;</span><a href="-style-sheet-loading-issue-reason/index.html">Audits.StyleSheetLoadingIssueReason</a><span class="token operator">&gt; </span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div data-togglable="PROPERTY">
+        <h2 class="">Properties</h2>
+        <div class="table"><a data-name="627014199%2FProperties%2F474703126" anchor-label="issueAdded" id="627014199%2FProperties%2F474703126" data-filterable-set=":cdp:dokkaHtmlPartial/commonMain"></a>
+          <div class="table-row" data-filterable-current=":cdp:dokkaHtmlPartial/commonMain" data-filterable-set=":cdp:dokkaHtmlPartial/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="issue-added.html"><span>issue</span><wbr><span><span>Added</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="627014199%2FProperties%2F474703126"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":cdp:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword">val </span><a href="issue-added.html">issueAdded</a><span class="token operator">: </span><span data-unresolved-link="kotlinx.coroutines.flow/Flow///PointingToDeclaration/">Flow</span><span class="token operator">&lt;</span><a href="-issue-added-parameter/index.html">Audits.IssueAddedParameter</a><span class="token operator">&gt;</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div data-togglable="FUNCTION">
+        <h2 class="">Functions</h2>
+        <div class="table"><a data-name="1637428964%2FFunctions%2F474703126" anchor-label="checkContrast" id="1637428964%2FFunctions%2F474703126" data-filterable-set=":cdp:dokkaHtmlPartial/commonMain"></a>
+          <div class="table-row" data-filterable-current=":cdp:dokkaHtmlPartial/commonMain" data-filterable-set=":cdp:dokkaHtmlPartial/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="check-contrast.html"><span>check</span><wbr><span><span>Contrast</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1637428964%2FFunctions%2F474703126"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":cdp:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword">suspend </span><span class="token keyword">fun </span><a href="check-contrast.html"><span class="token function">checkContrast</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">args<span class="token operator">: </span><a href="-check-contrast-parameter/index.html">Audits.CheckContrastParameter</a></span></span><span class="token punctuation">)</span></div><div class="symbol monospace"><span class="token keyword">suspend </span><span class="token keyword">fun </span><a href="check-contrast.html"><span class="token function">checkContrast</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">reportAAA<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-boolean/index.html">Boolean</a><span class="token operator">?</span><span class="token operator"> = </span>null</span></span><span class="token punctuation">)</span></div><div class="brief "><p class="paragraph">Runs the contrast check for the target page. Found issues are reported using Audits.issueAdded event.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1422122819%2FFunctions%2F474703126" anchor-label="checkFormsIssues" id="-1422122819%2FFunctions%2F474703126" data-filterable-set=":cdp:dokkaHtmlPartial/commonMain"></a>
+          <div class="table-row" data-filterable-current=":cdp:dokkaHtmlPartial/commonMain" data-filterable-set=":cdp:dokkaHtmlPartial/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="check-forms-issues.html"><span>check</span><wbr><span>Forms</span><wbr><span><span>Issues</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1422122819%2FFunctions%2F474703126"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":cdp:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword">suspend </span><span class="token keyword">fun </span><a href="check-forms-issues.html"><span class="token function">checkFormsIssues</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="-check-forms-issues-return/index.html">Audits.CheckFormsIssuesReturn</a></div><div class="brief "><p class="paragraph">Runs the form issues check for the target page. Found issues are reported using Audits.issueAdded event.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1499709748%2FFunctions%2F474703126" anchor-label="disable" id="1499709748%2FFunctions%2F474703126" data-filterable-set=":cdp:dokkaHtmlPartial/commonMain"></a>
+          <div class="table-row" data-filterable-current=":cdp:dokkaHtmlPartial/commonMain" data-filterable-set=":cdp:dokkaHtmlPartial/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="disable.html"><span><span>disable</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1499709748%2FFunctions%2F474703126"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":cdp:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword">suspend </span><span class="token keyword">fun </span><a href="disable.html"><span class="token function">disable</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span></div><div class="brief "><p class="paragraph">Disables issues domain, prevents further issues from being reported to the client.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-557018021%2FFunctions%2F474703126" anchor-label="enable" id="-557018021%2FFunctions%2F474703126" data-filterable-set=":cdp:dokkaHtmlPartial/commonMain"></a>
+          <div class="table-row" data-filterable-current=":cdp:dokkaHtmlPartial/commonMain" data-filterable-set=":cdp:dokkaHtmlPartial/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="enable.html"><span><span>enable</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-557018021%2FFunctions%2F474703126"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":cdp:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword">suspend </span><span class="token keyword">fun </span><a href="enable.html"><span class="token function">enable</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span></div><div class="brief "><p class="paragraph">Enables issues domain, sends the issues collected so far to the client by means of the <code class="lang-kotlin">issueAdded</code> event.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1049724985%2FFunctions%2F474703126" anchor-label="getEncodedResponse" id="1049724985%2FFunctions%2F474703126" data-filterable-set=":cdp:dokkaHtmlPartial/commonMain"></a>
+          <div class="table-row" data-filterable-current=":cdp:dokkaHtmlPartial/commonMain" data-filterable-set=":cdp:dokkaHtmlPartial/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="get-encoded-response.html"><span>get</span><wbr><span>Encoded</span><wbr><span><span>Response</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1049724985%2FFunctions%2F474703126"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":cdp:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword">suspend </span><span class="token keyword">fun </span><a href="get-encoded-response.html"><span class="token function">getEncodedResponse</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">args<span class="token operator">: </span><a href="-get-encoded-response-parameter/index.html">Audits.GetEncodedResponseParameter</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="-get-encoded-response-return/index.html">Audits.GetEncodedResponseReturn</a></div><div class="symbol monospace"><span class="token keyword">suspend </span><span class="token keyword">fun </span><a href="get-encoded-response.html"><span class="token function">getEncodedResponse</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">requestId<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a><span class="token punctuation">, </span></span><span class="parameter ">encoding<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a><span class="token punctuation">, </span></span><span class="parameter ">quality<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-double/index.html">Double</a><span class="token operator">?</span><span class="token operator"> = </span>null<span class="token punctuation">, </span></span><span class="parameter ">sizeOnly<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-boolean/index.html">Boolean</a><span class="token operator">?</span><span class="token operator"> = </span>null</span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="-get-encoded-response-return/index.html">Audits.GetEncodedResponseReturn</a></div><div class="brief "><p class="paragraph">Returns the response body and size if it were re-encoded with the specified settings. Only applies to images.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    <div class="footer">
+        <a href="#content" id="go-to-top-link" class="footer--button footer--button_go-to-top"></a>
+        <span>© 2025 Copyright</span>
+        <span class="pull-right">
+            <span>Generated by </span>
+            <a class="footer--link footer--link_external" href="https://github.com/Kotlin/dokka">
+                <span>dokka</span>
+            </a>
+        </span>
+    </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

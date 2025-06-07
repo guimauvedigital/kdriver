@@ -1,0 +1,1181 @@
+<!doctype html>
+<html class="no-js">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" charset="UTF-8">
+    <title>PrerenderFinalStatus</title>
+<link href="../../../../images/logo-icon.svg" rel="icon" type="image/svg">    <script>var pathToRoot = "../../../../";</script>
+    <script>document.documentElement.classList.replace("no-js","js");</script>
+    <script>const storage = localStorage.getItem("dokka-dark-mode")
+    if (storage == null) {
+        const osDarkSchemePreferred = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches
+        if (osDarkSchemePreferred === true) {
+            document.getElementsByTagName("html")[0].classList.add("theme-dark")
+        }
+    } else {
+        const savedDarkMode = JSON.parse(storage)
+        if(savedDarkMode === true) {
+            document.getElementsByTagName("html")[0].classList.add("theme-dark")
+        }
+    }
+    </script>
+<script type="text/javascript" src="https://unpkg.com/kotlin-playground@1/dist/playground.min.js" async></script>
+<script type="text/javascript" src="../../../../scripts/sourceset_dependencies.js" async></script>
+<link href="../../../../styles/style.css" rel="Stylesheet">
+<link href="../../../../styles/main.css" rel="Stylesheet">
+<link href="../../../../styles/prism.css" rel="Stylesheet">
+<link href="../../../../styles/logo-styles.css" rel="Stylesheet">
+<link href="../../../../styles/font-jb-sans-auto.css" rel="Stylesheet">
+<link href="../../../../ui-kit/ui-kit.min.css" rel="Stylesheet">
+<script type="text/javascript" src="../../../../scripts/clipboard.js" async></script>
+<script type="text/javascript" src="../../../../scripts/navigation-loader.js" async></script>
+<script type="text/javascript" src="../../../../scripts/platform-content-handler.js" async></script>
+<script type="text/javascript" src="../../../../scripts/main.js" defer></script>
+<script type="text/javascript" src="../../../../scripts/prism.js" async></script>
+<script type="text/javascript" src="../../../../ui-kit/ui-kit.min.js" defer></script>
+<script type="text/javascript" src="../../../../scripts/symbol-parameters-wrapper_deferred.js" defer></script></head>
+<body>
+    <div class="root">
+    <nav class="navigation theme-dark" id="navigation-wrapper">
+<a class="library-name--link" href="../../../../index.html">
+                    kdriver
+            </a>        <button class="navigation-controls--btn navigation-controls--btn_toc ui-kit_mobile-only" id="toc-toggle" type="button">Toggle table of contents
+        </button>
+        <div class="navigation-controls--break ui-kit_mobile-only"></div>
+        <div class="library-version" id="library-version">0.1.10
+        </div>
+        <div class="navigation-controls">
+        <div class="filter-section filter-section_loading" id="filter-section">
+                <button class="platform-tag platform-selector common-like" data-active="" data-filter=":cdp:dokkaHtmlPartial/commonMain">common</button>
+            <div class="dropdown filter-section--dropdown" data-role="dropdown" id="filter-section-dropdown">
+                <button class="button button_dropdown filter-section--dropdown-toggle" role="combobox" data-role="dropdown-toggle" aria-controls="platform-tags-listbox" aria-haspopup="listbox" aria-expanded="false" aria-label="Toggle source sets"></button>
+                <ul role="listbox" id="platform-tags-listbox" class="dropdown--list" data-role="dropdown-listbox">
+                    <div class="dropdown--header"><span>Platform filter</span>
+                        <button class="button" data-role="dropdown-toggle" aria-label="Close platform filter">
+                            <i class="ui-kit-icon ui-kit-icon_cross"></i>
+                        </button>
+                    </div>
+                        <li role="option" class="dropdown--option platform-selector-option common-like" tabindex="0">
+                            <label class="checkbox">
+                                <input type="checkbox" class="checkbox--input" id=":cdp:dokkaHtmlPartial/commonMain" data-filter=":cdp:dokkaHtmlPartial/commonMain">
+                                <span class="checkbox--icon"></span>
+                                common
+                            </label>
+                        </li>
+                </ul>
+                <div class="dropdown--overlay"></div>
+            </div>
+        </div>
+            <button class="navigation-controls--btn navigation-controls--btn_theme" id="theme-toggle-button" type="button">Switch theme
+            </button>
+            <div class="navigation-controls--btn navigation-controls--btn_search" id="searchBar" role="button">Search in
+                API
+            </div>
+        </div>
+    </nav>
+        <div id="container">
+            <div class="sidebar" id="leftColumn">
+                <div class="dropdown theme-dark_mobile" data-role="dropdown" id="toc-dropdown">
+                    <ul role="listbox" id="toc-listbox" class="dropdown--list dropdown--list_toc-list" data-role="dropdown-listbox">
+                        <div class="dropdown--header">
+                            <span>
+                                    kdriver
+                            </span>
+                            <button class="button" data-role="dropdown-toggle" aria-label="Close table of contents">
+                                <i class="ui-kit-icon ui-kit-icon_cross"></i>
+                            </button>
+                        </div>
+                        <div class="sidebar--inner" id="sideMenu"></div>
+                    </ul>
+                    <div class="dropdown--overlay"></div>
+                </div>
+            </div>
+            <div id="main">
+<div class="main-content" data-page-type="classlike" id="content" pageids="cdp::dev.kdriver.cdp.domain/Preload.PrerenderFinalStatus///PointingToDeclaration//474703126">
+  <div class="breadcrumbs"><a href="../../../index.html">cdp</a><span class="delimiter">/</span><a href="../../index.html">dev.kdriver.cdp.domain</a><span class="delimiter">/</span><a href="../index.html">Preload</a><span class="delimiter">/</span><span class="current">PrerenderFinalStatus</span></div>
+  <div class="cover ">
+    <h1 class="cover"><span>Prerender</span><wbr><span>Final</span><wbr><span><span>Status</span></span></h1>
+    <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":cdp:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><div class="block"><div class="block"><span class="token annotation builtin">@</span><span data-unresolved-link="kotlinx.serialization/Serializable///PointingToDeclaration/"><span class="token annotation builtin">Serializable</span></span></div></div><span class="token keyword">enum </span><a href="index.html">PrerenderFinalStatus</a> : <a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-enum/index.html">Enum</a><span class="token operator">&lt;</span><a href="index.html">Preload.PrerenderFinalStatus</a><span class="token operator">&gt; </span></div><p class="paragraph">List of FinalStatus reasons for Prerender2.</p></div></div>
+  </div>
+  <div class="tabbedcontent">
+    <div class="tabs-section" tabs-section="tabs-section"><button class="section-tab" data-active="" data-togglable="CONSTRUCTOR,TYPE,PROPERTY,FUNCTION">Members</button><button class="section-tab" data-togglable="ENTRY">Entries</button></div>
+    <div class="tabs-section-body">
+      <div data-togglable="ENTRY">
+        <h2 class="">Entries</h2>
+        <div class="table"><a data-name="2132802211%2FClasslikes%2F474703126" anchor-label="ACTIVATED" id="2132802211%2FClasslikes%2F474703126" data-filterable-set=":cdp:dokkaHtmlPartial/commonMain"></a>
+          <div class="table-row" data-togglable="ENTRY" data-filterable-current=":cdp:dokkaHtmlPartial/commonMain" data-filterable-set=":cdp:dokkaHtmlPartial/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-a-c-t-i-v-a-t-e-d/index.html">ACTIVATED</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="2132802211%2FClasslikes%2F474703126"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":cdp:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><div class="block"><div class="block"><div class="block"><span class="token annotation builtin">@</span><span data-unresolved-link="kotlinx.serialization/SerialName///PointingToDeclaration/"><span class="token annotation builtin">SerialName</span></span><span class="token punctuation">(</span><span>value<span class="token operator"> = </span><span class="breakable-word"><span class="token string">"Activated"</span></span></span><wbr><span class="token punctuation">)</span></div></div><a href="-a-c-t-i-v-a-t-e-d/index.html">ACTIVATED</a></div></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1023850731%2FClasslikes%2F474703126" anchor-label="DESTROYED" id="1023850731%2FClasslikes%2F474703126" data-filterable-set=":cdp:dokkaHtmlPartial/commonMain"></a>
+          <div class="table-row" data-togglable="ENTRY" data-filterable-current=":cdp:dokkaHtmlPartial/commonMain" data-filterable-set=":cdp:dokkaHtmlPartial/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-d-e-s-t-r-o-y-e-d/index.html">DESTROYED</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1023850731%2FClasslikes%2F474703126"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":cdp:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><div class="block"><div class="block"><div class="block"><span class="token annotation builtin">@</span><span data-unresolved-link="kotlinx.serialization/SerialName///PointingToDeclaration/"><span class="token annotation builtin">SerialName</span></span><span class="token punctuation">(</span><span>value<span class="token operator"> = </span><span class="breakable-word"><span class="token string">"Destroyed"</span></span></span><wbr><span class="token punctuation">)</span></div></div><a href="-d-e-s-t-r-o-y-e-d/index.html">DESTROYED</a></div></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1188247315%2FClasslikes%2F474703126" anchor-label="LOWENDDEVICE" id="1188247315%2FClasslikes%2F474703126" data-filterable-set=":cdp:dokkaHtmlPartial/commonMain"></a>
+          <div class="table-row" data-togglable="ENTRY" data-filterable-current=":cdp:dokkaHtmlPartial/commonMain" data-filterable-set=":cdp:dokkaHtmlPartial/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-l-o-w-e-n-d-d-e-v-i-c-e/index.html">LOWENDDEVICE</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1188247315%2FClasslikes%2F474703126"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":cdp:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><div class="block"><div class="block"><div class="block"><span class="token annotation builtin">@</span><span data-unresolved-link="kotlinx.serialization/SerialName///PointingToDeclaration/"><span class="token annotation builtin">SerialName</span></span><span class="token punctuation">(</span><span>value<span class="token operator"> = </span><span class="breakable-word"><span class="token string">"LowEndDevice"</span></span></span><wbr><span class="token punctuation">)</span></div></div><a href="-l-o-w-e-n-d-d-e-v-i-c-e/index.html">LOWENDDEVICE</a></div></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-73697334%2FClasslikes%2F474703126" anchor-label="INVALIDSCHEMEREDIRECT" id="-73697334%2FClasslikes%2F474703126" data-filterable-set=":cdp:dokkaHtmlPartial/commonMain"></a>
+          <div class="table-row" data-togglable="ENTRY" data-filterable-current=":cdp:dokkaHtmlPartial/commonMain" data-filterable-set=":cdp:dokkaHtmlPartial/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-i-n-v-a-l-i-d-s-c-h-e-m-e-r-e-d-i-r-e-c-t/index.html">INVALIDSCHEMEREDIRECT</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-73697334%2FClasslikes%2F474703126"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":cdp:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><div class="block"><div class="block"><div class="block"><span class="token annotation builtin">@</span><span data-unresolved-link="kotlinx.serialization/SerialName///PointingToDeclaration/"><span class="token annotation builtin">SerialName</span></span><span class="token punctuation">(</span><span>value<span class="token operator"> = </span><span class="breakable-word"><span class="token string">"InvalidSchemeRedirect"</span></span></span><wbr><span class="token punctuation">)</span></div></div><a href="-i-n-v-a-l-i-d-s-c-h-e-m-e-r-e-d-i-r-e-c-t/index.html">INVALIDSCHEMEREDIRECT</a></div></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="616449410%2FClasslikes%2F474703126" anchor-label="INVALIDSCHEMENAVIGATION" id="616449410%2FClasslikes%2F474703126" data-filterable-set=":cdp:dokkaHtmlPartial/commonMain"></a>
+          <div class="table-row" data-togglable="ENTRY" data-filterable-current=":cdp:dokkaHtmlPartial/commonMain" data-filterable-set=":cdp:dokkaHtmlPartial/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-i-n-v-a-l-i-d-s-c-h-e-m-e-n-a-v-i-g-a-t-i-o-n/index.html">INVALIDSCHEMENAVIGATION</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="616449410%2FClasslikes%2F474703126"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":cdp:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><div class="block"><div class="block"><div class="block"><span class="token annotation builtin">@</span><span data-unresolved-link="kotlinx.serialization/SerialName///PointingToDeclaration/"><span class="token annotation builtin">SerialName</span></span><span class="token punctuation">(</span><span>value<span class="token operator"> = </span><span class="breakable-word"><span class="token string">"InvalidSchemeNavigation"</span></span></span><wbr><span class="token punctuation">)</span></div></div><a href="-i-n-v-a-l-i-d-s-c-h-e-m-e-n-a-v-i-g-a-t-i-o-n/index.html">INVALIDSCHEMENAVIGATION</a></div></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="4546794%2FClasslikes%2F474703126" anchor-label="NAVIGATIONREQUESTBLOCKEDBYCSP" id="4546794%2FClasslikes%2F474703126" data-filterable-set=":cdp:dokkaHtmlPartial/commonMain"></a>
+          <div class="table-row" data-togglable="ENTRY" data-filterable-current=":cdp:dokkaHtmlPartial/commonMain" data-filterable-set=":cdp:dokkaHtmlPartial/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-n-a-v-i-g-a-t-i-o-n-r-e-q-u-e-s-t-b-l-o-c-k-e-d-b-y-c-s-p/index.html">NAVIGATIONREQUESTBLOCKEDBYCSP</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="4546794%2FClasslikes%2F474703126"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":cdp:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><div class="block"><div class="block"><div class="block"><span class="token annotation builtin">@</span><span data-unresolved-link="kotlinx.serialization/SerialName///PointingToDeclaration/"><span class="token annotation builtin">SerialName</span></span><span class="token punctuation">(</span><span>value<span class="token operator"> = </span><span class="breakable-word"><span class="token string">"NavigationRequestBlockedByCsp"</span></span></span><wbr><span class="token punctuation">)</span></div></div><a href="-n-a-v-i-g-a-t-i-o-n-r-e-q-u-e-s-t-b-l-o-c-k-e-d-b-y-c-s-p/index.html">NAVIGATIONREQUESTBLOCKEDBYCSP</a></div></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-2014117510%2FClasslikes%2F474703126" anchor-label="MAINFRAMENAVIGATION" id="-2014117510%2FClasslikes%2F474703126" data-filterable-set=":cdp:dokkaHtmlPartial/commonMain"></a>
+          <div class="table-row" data-togglable="ENTRY" data-filterable-current=":cdp:dokkaHtmlPartial/commonMain" data-filterable-set=":cdp:dokkaHtmlPartial/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-m-a-i-n-f-r-a-m-e-n-a-v-i-g-a-t-i-o-n/index.html">MAINFRAMENAVIGATION</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-2014117510%2FClasslikes%2F474703126"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":cdp:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><div class="block"><div class="block"><div class="block"><span class="token annotation builtin">@</span><span data-unresolved-link="kotlinx.serialization/SerialName///PointingToDeclaration/"><span class="token annotation builtin">SerialName</span></span><span class="token punctuation">(</span><span>value<span class="token operator"> = </span><span class="breakable-word"><span class="token string">"MainFrameNavigation"</span></span></span><wbr><span class="token punctuation">)</span></div></div><a href="-m-a-i-n-f-r-a-m-e-n-a-v-i-g-a-t-i-o-n/index.html">MAINFRAMENAVIGATION</a></div></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1166866617%2FClasslikes%2F474703126" anchor-label="MOJOBINDERPOLICY" id="1166866617%2FClasslikes%2F474703126" data-filterable-set=":cdp:dokkaHtmlPartial/commonMain"></a>
+          <div class="table-row" data-togglable="ENTRY" data-filterable-current=":cdp:dokkaHtmlPartial/commonMain" data-filterable-set=":cdp:dokkaHtmlPartial/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-m-o-j-o-b-i-n-d-e-r-p-o-l-i-c-y/index.html">MOJOBINDERPOLICY</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1166866617%2FClasslikes%2F474703126"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":cdp:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><div class="block"><div class="block"><div class="block"><span class="token annotation builtin">@</span><span data-unresolved-link="kotlinx.serialization/SerialName///PointingToDeclaration/"><span class="token annotation builtin">SerialName</span></span><span class="token punctuation">(</span><span>value<span class="token operator"> = </span><span class="breakable-word"><span class="token string">"MojoBinderPolicy"</span></span></span><wbr><span class="token punctuation">)</span></div></div><a href="-m-o-j-o-b-i-n-d-e-r-p-o-l-i-c-y/index.html">MOJOBINDERPOLICY</a></div></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="36457072%2FClasslikes%2F474703126" anchor-label="RENDERERPROCESSCRASHED" id="36457072%2FClasslikes%2F474703126" data-filterable-set=":cdp:dokkaHtmlPartial/commonMain"></a>
+          <div class="table-row" data-togglable="ENTRY" data-filterable-current=":cdp:dokkaHtmlPartial/commonMain" data-filterable-set=":cdp:dokkaHtmlPartial/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-r-e-n-d-e-r-e-r-p-r-o-c-e-s-s-c-r-a-s-h-e-d/index.html">RENDERERPROCESSCRASHED</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="36457072%2FClasslikes%2F474703126"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":cdp:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><div class="block"><div class="block"><div class="block"><span class="token annotation builtin">@</span><span data-unresolved-link="kotlinx.serialization/SerialName///PointingToDeclaration/"><span class="token annotation builtin">SerialName</span></span><span class="token punctuation">(</span><span>value<span class="token operator"> = </span><span class="breakable-word"><span class="token string">"RendererProcessCrashed"</span></span></span><wbr><span class="token punctuation">)</span></div></div><a href="-r-e-n-d-e-r-e-r-p-r-o-c-e-s-s-c-r-a-s-h-e-d/index.html">RENDERERPROCESSCRASHED</a></div></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1009104283%2FClasslikes%2F474703126" anchor-label="RENDERERPROCESSKILLED" id="1009104283%2FClasslikes%2F474703126" data-filterable-set=":cdp:dokkaHtmlPartial/commonMain"></a>
+          <div class="table-row" data-togglable="ENTRY" data-filterable-current=":cdp:dokkaHtmlPartial/commonMain" data-filterable-set=":cdp:dokkaHtmlPartial/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-r-e-n-d-e-r-e-r-p-r-o-c-e-s-s-k-i-l-l-e-d/index.html">RENDERERPROCESSKILLED</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1009104283%2FClasslikes%2F474703126"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":cdp:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><div class="block"><div class="block"><div class="block"><span class="token annotation builtin">@</span><span data-unresolved-link="kotlinx.serialization/SerialName///PointingToDeclaration/"><span class="token annotation builtin">SerialName</span></span><span class="token punctuation">(</span><span>value<span class="token operator"> = </span><span class="breakable-word"><span class="token string">"RendererProcessKilled"</span></span></span><wbr><span class="token punctuation">)</span></div></div><a href="-r-e-n-d-e-r-e-r-p-r-o-c-e-s-s-k-i-l-l-e-d/index.html">RENDERERPROCESSKILLED</a></div></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1386620222%2FClasslikes%2F474703126" anchor-label="DOWNLOAD" id="1386620222%2FClasslikes%2F474703126" data-filterable-set=":cdp:dokkaHtmlPartial/commonMain"></a>
+          <div class="table-row" data-togglable="ENTRY" data-filterable-current=":cdp:dokkaHtmlPartial/commonMain" data-filterable-set=":cdp:dokkaHtmlPartial/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-d-o-w-n-l-o-a-d/index.html">DOWNLOAD</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1386620222%2FClasslikes%2F474703126"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":cdp:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><div class="block"><div class="block"><div class="block"><span class="token annotation builtin">@</span><span data-unresolved-link="kotlinx.serialization/SerialName///PointingToDeclaration/"><span class="token annotation builtin">SerialName</span></span><span class="token punctuation">(</span><span>value<span class="token operator"> = </span><span class="breakable-word"><span class="token string">"Download"</span></span></span><wbr><span class="token punctuation">)</span></div></div><a href="-d-o-w-n-l-o-a-d/index.html">DOWNLOAD</a></div></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="839748695%2FClasslikes%2F474703126" anchor-label="TRIGGERDESTROYED" id="839748695%2FClasslikes%2F474703126" data-filterable-set=":cdp:dokkaHtmlPartial/commonMain"></a>
+          <div class="table-row" data-togglable="ENTRY" data-filterable-current=":cdp:dokkaHtmlPartial/commonMain" data-filterable-set=":cdp:dokkaHtmlPartial/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-t-r-i-g-g-e-r-d-e-s-t-r-o-y-e-d/index.html">TRIGGERDESTROYED</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="839748695%2FClasslikes%2F474703126"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":cdp:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><div class="block"><div class="block"><div class="block"><span class="token annotation builtin">@</span><span data-unresolved-link="kotlinx.serialization/SerialName///PointingToDeclaration/"><span class="token annotation builtin">SerialName</span></span><span class="token punctuation">(</span><span>value<span class="token operator"> = </span><span class="breakable-word"><span class="token string">"TriggerDestroyed"</span></span></span><wbr><span class="token punctuation">)</span></div></div><a href="-t-r-i-g-g-e-r-d-e-s-t-r-o-y-e-d/index.html">TRIGGERDESTROYED</a></div></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="293110931%2FClasslikes%2F474703126" anchor-label="NAVIGATIONNOTCOMMITTED" id="293110931%2FClasslikes%2F474703126" data-filterable-set=":cdp:dokkaHtmlPartial/commonMain"></a>
+          <div class="table-row" data-togglable="ENTRY" data-filterable-current=":cdp:dokkaHtmlPartial/commonMain" data-filterable-set=":cdp:dokkaHtmlPartial/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-n-a-v-i-g-a-t-i-o-n-n-o-t-c-o-m-m-i-t-t-e-d/index.html">NAVIGATIONNOTCOMMITTED</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="293110931%2FClasslikes%2F474703126"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":cdp:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><div class="block"><div class="block"><div class="block"><span class="token annotation builtin">@</span><span data-unresolved-link="kotlinx.serialization/SerialName///PointingToDeclaration/"><span class="token annotation builtin">SerialName</span></span><span class="token punctuation">(</span><span>value<span class="token operator"> = </span><span class="breakable-word"><span class="token string">"NavigationNotCommitted"</span></span></span><wbr><span class="token punctuation">)</span></div></div><a href="-n-a-v-i-g-a-t-i-o-n-n-o-t-c-o-m-m-i-t-t-e-d/index.html">NAVIGATIONNOTCOMMITTED</a></div></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="62099837%2FClasslikes%2F474703126" anchor-label="NAVIGATIONBADHTTPSTATUS" id="62099837%2FClasslikes%2F474703126" data-filterable-set=":cdp:dokkaHtmlPartial/commonMain"></a>
+          <div class="table-row" data-togglable="ENTRY" data-filterable-current=":cdp:dokkaHtmlPartial/commonMain" data-filterable-set=":cdp:dokkaHtmlPartial/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-n-a-v-i-g-a-t-i-o-n-b-a-d-h-t-t-p-s-t-a-t-u-s/index.html">NAVIGATIONBADHTTPSTATUS</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="62099837%2FClasslikes%2F474703126"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":cdp:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><div class="block"><div class="block"><div class="block"><span class="token annotation builtin">@</span><span data-unresolved-link="kotlinx.serialization/SerialName///PointingToDeclaration/"><span class="token annotation builtin">SerialName</span></span><span class="token punctuation">(</span><span>value<span class="token operator"> = </span><span class="breakable-word"><span class="token string">"NavigationBadHttpStatus"</span></span></span><wbr><span class="token punctuation">)</span></div></div><a href="-n-a-v-i-g-a-t-i-o-n-b-a-d-h-t-t-p-s-t-a-t-u-s/index.html">NAVIGATIONBADHTTPSTATUS</a></div></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1452816719%2FClasslikes%2F474703126" anchor-label="CLIENTCERTREQUESTED" id="-1452816719%2FClasslikes%2F474703126" data-filterable-set=":cdp:dokkaHtmlPartial/commonMain"></a>
+          <div class="table-row" data-togglable="ENTRY" data-filterable-current=":cdp:dokkaHtmlPartial/commonMain" data-filterable-set=":cdp:dokkaHtmlPartial/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-c-l-i-e-n-t-c-e-r-t-r-e-q-u-e-s-t-e-d/index.html">CLIENTCERTREQUESTED</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1452816719%2FClasslikes%2F474703126"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":cdp:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><div class="block"><div class="block"><div class="block"><span class="token annotation builtin">@</span><span data-unresolved-link="kotlinx.serialization/SerialName///PointingToDeclaration/"><span class="token annotation builtin">SerialName</span></span><span class="token punctuation">(</span><span>value<span class="token operator"> = </span><span class="breakable-word"><span class="token string">"ClientCertRequested"</span></span></span><wbr><span class="token punctuation">)</span></div></div><a href="-c-l-i-e-n-t-c-e-r-t-r-e-q-u-e-s-t-e-d/index.html">CLIENTCERTREQUESTED</a></div></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1152470247%2FClasslikes%2F474703126" anchor-label="NAVIGATIONREQUESTNETWORKERROR" id="1152470247%2FClasslikes%2F474703126" data-filterable-set=":cdp:dokkaHtmlPartial/commonMain"></a>
+          <div class="table-row" data-togglable="ENTRY" data-filterable-current=":cdp:dokkaHtmlPartial/commonMain" data-filterable-set=":cdp:dokkaHtmlPartial/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-n-a-v-i-g-a-t-i-o-n-r-e-q-u-e-s-t-n-e-t-w-o-r-k-e-r-r-o-r/index.html">NAVIGATIONREQUESTNETWORKERROR</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1152470247%2FClasslikes%2F474703126"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":cdp:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><div class="block"><div class="block"><div class="block"><span class="token annotation builtin">@</span><span data-unresolved-link="kotlinx.serialization/SerialName///PointingToDeclaration/"><span class="token annotation builtin">SerialName</span></span><span class="token punctuation">(</span><span>value<span class="token operator"> = </span><span class="breakable-word"><span class="token string">"NavigationRequestNetworkError"</span></span></span><wbr><span class="token punctuation">)</span></div></div><a href="-n-a-v-i-g-a-t-i-o-n-r-e-q-u-e-s-t-n-e-t-w-o-r-k-e-r-r-o-r/index.html">NAVIGATIONREQUESTNETWORKERROR</a></div></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1713322209%2FClasslikes%2F474703126" anchor-label="CANCELALLHOSTSFORTESTING" id="1713322209%2FClasslikes%2F474703126" data-filterable-set=":cdp:dokkaHtmlPartial/commonMain"></a>
+          <div class="table-row" data-togglable="ENTRY" data-filterable-current=":cdp:dokkaHtmlPartial/commonMain" data-filterable-set=":cdp:dokkaHtmlPartial/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-c-a-n-c-e-l-a-l-l-h-o-s-t-s-f-o-r-t-e-s-t-i-n-g/index.html">CANCELALLHOSTSFORTESTING</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1713322209%2FClasslikes%2F474703126"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":cdp:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><div class="block"><div class="block"><div class="block"><span class="token annotation builtin">@</span><span data-unresolved-link="kotlinx.serialization/SerialName///PointingToDeclaration/"><span class="token annotation builtin">SerialName</span></span><span class="token punctuation">(</span><span>value<span class="token operator"> = </span><span class="breakable-word"><span class="token string">"CancelAllHostsForTesting"</span></span></span><wbr><span class="token punctuation">)</span></div></div><a href="-c-a-n-c-e-l-a-l-l-h-o-s-t-s-f-o-r-t-e-s-t-i-n-g/index.html">CANCELALLHOSTSFORTESTING</a></div></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="463191125%2FClasslikes%2F474703126" anchor-label="DIDFAILLOAD" id="463191125%2FClasslikes%2F474703126" data-filterable-set=":cdp:dokkaHtmlPartial/commonMain"></a>
+          <div class="table-row" data-togglable="ENTRY" data-filterable-current=":cdp:dokkaHtmlPartial/commonMain" data-filterable-set=":cdp:dokkaHtmlPartial/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-d-i-d-f-a-i-l-l-o-a-d/index.html">DIDFAILLOAD</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="463191125%2FClasslikes%2F474703126"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":cdp:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><div class="block"><div class="block"><div class="block"><span class="token annotation builtin">@</span><span data-unresolved-link="kotlinx.serialization/SerialName///PointingToDeclaration/"><span class="token annotation builtin">SerialName</span></span><span class="token punctuation">(</span><span>value<span class="token operator"> = </span><span class="breakable-word"><span class="token string">"DidFailLoad"</span></span></span><wbr><span class="token punctuation">)</span></div></div><a href="-d-i-d-f-a-i-l-l-o-a-d/index.html">DIDFAILLOAD</a></div></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-373734344%2FClasslikes%2F474703126" anchor-label="STOP" id="-373734344%2FClasslikes%2F474703126" data-filterable-set=":cdp:dokkaHtmlPartial/commonMain"></a>
+          <div class="table-row" data-togglable="ENTRY" data-filterable-current=":cdp:dokkaHtmlPartial/commonMain" data-filterable-set=":cdp:dokkaHtmlPartial/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-s-t-o-p/index.html">STOP</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-373734344%2FClasslikes%2F474703126"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":cdp:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><div class="block"><div class="block"><div class="block"><span class="token annotation builtin">@</span><span data-unresolved-link="kotlinx.serialization/SerialName///PointingToDeclaration/"><span class="token annotation builtin">SerialName</span></span><span class="token punctuation">(</span><span>value<span class="token operator"> = </span><span class="breakable-word"><span class="token string">"Stop"</span></span></span><wbr><span class="token punctuation">)</span></div></div><a href="-s-t-o-p/index.html">STOP</a></div></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1290938159%2FClasslikes%2F474703126" anchor-label="SSLCERTIFICATEERROR" id="1290938159%2FClasslikes%2F474703126" data-filterable-set=":cdp:dokkaHtmlPartial/commonMain"></a>
+          <div class="table-row" data-togglable="ENTRY" data-filterable-current=":cdp:dokkaHtmlPartial/commonMain" data-filterable-set=":cdp:dokkaHtmlPartial/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-s-s-l-c-e-r-t-i-f-i-c-a-t-e-e-r-r-o-r/index.html">SSLCERTIFICATEERROR</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1290938159%2FClasslikes%2F474703126"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":cdp:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><div class="block"><div class="block"><div class="block"><span class="token annotation builtin">@</span><span data-unresolved-link="kotlinx.serialization/SerialName///PointingToDeclaration/"><span class="token annotation builtin">SerialName</span></span><span class="token punctuation">(</span><span>value<span class="token operator"> = </span><span class="breakable-word"><span class="token string">"SslCertificateError"</span></span></span><wbr><span class="token punctuation">)</span></div></div><a href="-s-s-l-c-e-r-t-i-f-i-c-a-t-e-e-r-r-o-r/index.html">SSLCERTIFICATEERROR</a></div></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1023833741%2FClasslikes%2F474703126" anchor-label="LOGINAUTHREQUESTED" id="-1023833741%2FClasslikes%2F474703126" data-filterable-set=":cdp:dokkaHtmlPartial/commonMain"></a>
+          <div class="table-row" data-togglable="ENTRY" data-filterable-current=":cdp:dokkaHtmlPartial/commonMain" data-filterable-set=":cdp:dokkaHtmlPartial/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-l-o-g-i-n-a-u-t-h-r-e-q-u-e-s-t-e-d/index.html">LOGINAUTHREQUESTED</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1023833741%2FClasslikes%2F474703126"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":cdp:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><div class="block"><div class="block"><div class="block"><span class="token annotation builtin">@</span><span data-unresolved-link="kotlinx.serialization/SerialName///PointingToDeclaration/"><span class="token annotation builtin">SerialName</span></span><span class="token punctuation">(</span><span>value<span class="token operator"> = </span><span class="breakable-word"><span class="token string">"LoginAuthRequested"</span></span></span><wbr><span class="token punctuation">)</span></div></div><a href="-l-o-g-i-n-a-u-t-h-r-e-q-u-e-s-t-e-d/index.html">LOGINAUTHREQUESTED</a></div></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-689982727%2FClasslikes%2F474703126" anchor-label="UACHANGEREQUIRESRELOAD" id="-689982727%2FClasslikes%2F474703126" data-filterable-set=":cdp:dokkaHtmlPartial/commonMain"></a>
+          <div class="table-row" data-togglable="ENTRY" data-filterable-current=":cdp:dokkaHtmlPartial/commonMain" data-filterable-set=":cdp:dokkaHtmlPartial/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-u-a-c-h-a-n-g-e-r-e-q-u-i-r-e-s-r-e-l-o-a-d/index.html">UACHANGEREQUIRESRELOAD</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-689982727%2FClasslikes%2F474703126"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":cdp:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><div class="block"><div class="block"><div class="block"><span class="token annotation builtin">@</span><span data-unresolved-link="kotlinx.serialization/SerialName///PointingToDeclaration/"><span class="token annotation builtin">SerialName</span></span><span class="token punctuation">(</span><span>value<span class="token operator"> = </span><span class="breakable-word"><span class="token string">"UaChangeRequiresReload"</span></span></span><wbr><span class="token punctuation">)</span></div></div><a href="-u-a-c-h-a-n-g-e-r-e-q-u-i-r-e-s-r-e-l-o-a-d/index.html">UACHANGEREQUIRESRELOAD</a></div></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1605954976%2FClasslikes%2F474703126" anchor-label="BLOCKEDBYCLIENT" id="-1605954976%2FClasslikes%2F474703126" data-filterable-set=":cdp:dokkaHtmlPartial/commonMain"></a>
+          <div class="table-row" data-togglable="ENTRY" data-filterable-current=":cdp:dokkaHtmlPartial/commonMain" data-filterable-set=":cdp:dokkaHtmlPartial/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-b-l-o-c-k-e-d-b-y-c-l-i-e-n-t/index.html">BLOCKEDBYCLIENT</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1605954976%2FClasslikes%2F474703126"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":cdp:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><div class="block"><div class="block"><div class="block"><span class="token annotation builtin">@</span><span data-unresolved-link="kotlinx.serialization/SerialName///PointingToDeclaration/"><span class="token annotation builtin">SerialName</span></span><span class="token punctuation">(</span><span>value<span class="token operator"> = </span><span class="breakable-word"><span class="token string">"BlockedByClient"</span></span></span><wbr><span class="token punctuation">)</span></div></div><a href="-b-l-o-c-k-e-d-b-y-c-l-i-e-n-t/index.html">BLOCKEDBYCLIENT</a></div></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1804059881%2FClasslikes%2F474703126" anchor-label="AUDIOOUTPUTDEVICEREQUESTED" id="-1804059881%2FClasslikes%2F474703126" data-filterable-set=":cdp:dokkaHtmlPartial/commonMain"></a>
+          <div class="table-row" data-togglable="ENTRY" data-filterable-current=":cdp:dokkaHtmlPartial/commonMain" data-filterable-set=":cdp:dokkaHtmlPartial/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-a-u-d-i-o-o-u-t-p-u-t-d-e-v-i-c-e-r-e-q-u-e-s-t-e-d/index.html">AUDIOOUTPUTDEVICEREQUESTED</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1804059881%2FClasslikes%2F474703126"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":cdp:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><div class="block"><div class="block"><div class="block"><span class="token annotation builtin">@</span><span data-unresolved-link="kotlinx.serialization/SerialName///PointingToDeclaration/"><span class="token annotation builtin">SerialName</span></span><span class="token punctuation">(</span><span>value<span class="token operator"> = </span><span class="breakable-word"><span class="token string">"AudioOutputDeviceRequested"</span></span></span><wbr><span class="token punctuation">)</span></div></div><a href="-a-u-d-i-o-o-u-t-p-u-t-d-e-v-i-c-e-r-e-q-u-e-s-t-e-d/index.html">AUDIOOUTPUTDEVICEREQUESTED</a></div></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-239220396%2FClasslikes%2F474703126" anchor-label="MIXEDCONTENT" id="-239220396%2FClasslikes%2F474703126" data-filterable-set=":cdp:dokkaHtmlPartial/commonMain"></a>
+          <div class="table-row" data-togglable="ENTRY" data-filterable-current=":cdp:dokkaHtmlPartial/commonMain" data-filterable-set=":cdp:dokkaHtmlPartial/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-m-i-x-e-d-c-o-n-t-e-n-t/index.html">MIXEDCONTENT</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-239220396%2FClasslikes%2F474703126"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":cdp:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><div class="block"><div class="block"><div class="block"><span class="token annotation builtin">@</span><span data-unresolved-link="kotlinx.serialization/SerialName///PointingToDeclaration/"><span class="token annotation builtin">SerialName</span></span><span class="token punctuation">(</span><span>value<span class="token operator"> = </span><span class="breakable-word"><span class="token string">"MixedContent"</span></span></span><wbr><span class="token punctuation">)</span></div></div><a href="-m-i-x-e-d-c-o-n-t-e-n-t/index.html">MIXEDCONTENT</a></div></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-955481001%2FClasslikes%2F474703126" anchor-label="TRIGGERBACKGROUNDED" id="-955481001%2FClasslikes%2F474703126" data-filterable-set=":cdp:dokkaHtmlPartial/commonMain"></a>
+          <div class="table-row" data-togglable="ENTRY" data-filterable-current=":cdp:dokkaHtmlPartial/commonMain" data-filterable-set=":cdp:dokkaHtmlPartial/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-t-r-i-g-g-e-r-b-a-c-k-g-r-o-u-n-d-e-d/index.html">TRIGGERBACKGROUNDED</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-955481001%2FClasslikes%2F474703126"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":cdp:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><div class="block"><div class="block"><div class="block"><span class="token annotation builtin">@</span><span data-unresolved-link="kotlinx.serialization/SerialName///PointingToDeclaration/"><span class="token annotation builtin">SerialName</span></span><span class="token punctuation">(</span><span>value<span class="token operator"> = </span><span class="breakable-word"><span class="token string">"TriggerBackgrounded"</span></span></span><wbr><span class="token punctuation">)</span></div></div><a href="-t-r-i-g-g-e-r-b-a-c-k-g-r-o-u-n-d-e-d/index.html">TRIGGERBACKGROUNDED</a></div></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1851113729%2FClasslikes%2F474703126" anchor-label="MEMORYLIMITEXCEEDED" id="-1851113729%2FClasslikes%2F474703126" data-filterable-set=":cdp:dokkaHtmlPartial/commonMain"></a>
+          <div class="table-row" data-togglable="ENTRY" data-filterable-current=":cdp:dokkaHtmlPartial/commonMain" data-filterable-set=":cdp:dokkaHtmlPartial/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-m-e-m-o-r-y-l-i-m-i-t-e-x-c-e-e-d-e-d/index.html">MEMORYLIMITEXCEEDED</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1851113729%2FClasslikes%2F474703126"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":cdp:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><div class="block"><div class="block"><div class="block"><span class="token annotation builtin">@</span><span data-unresolved-link="kotlinx.serialization/SerialName///PointingToDeclaration/"><span class="token annotation builtin">SerialName</span></span><span class="token punctuation">(</span><span>value<span class="token operator"> = </span><span class="breakable-word"><span class="token string">"MemoryLimitExceeded"</span></span></span><wbr><span class="token punctuation">)</span></div></div><a href="-m-e-m-o-r-y-l-i-m-i-t-e-x-c-e-e-d-e-d/index.html">MEMORYLIMITEXCEEDED</a></div></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-532260372%2FClasslikes%2F474703126" anchor-label="DATASAVERENABLED" id="-532260372%2FClasslikes%2F474703126" data-filterable-set=":cdp:dokkaHtmlPartial/commonMain"></a>
+          <div class="table-row" data-togglable="ENTRY" data-filterable-current=":cdp:dokkaHtmlPartial/commonMain" data-filterable-set=":cdp:dokkaHtmlPartial/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-d-a-t-a-s-a-v-e-r-e-n-a-b-l-e-d/index.html">DATASAVERENABLED</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-532260372%2FClasslikes%2F474703126"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":cdp:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><div class="block"><div class="block"><div class="block"><span class="token annotation builtin">@</span><span data-unresolved-link="kotlinx.serialization/SerialName///PointingToDeclaration/"><span class="token annotation builtin">SerialName</span></span><span class="token punctuation">(</span><span>value<span class="token operator"> = </span><span class="breakable-word"><span class="token string">"DataSaverEnabled"</span></span></span><wbr><span class="token punctuation">)</span></div></div><a href="-d-a-t-a-s-a-v-e-r-e-n-a-b-l-e-d/index.html">DATASAVERENABLED</a></div></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1363993667%2FClasslikes%2F474703126" anchor-label="TRIGGERURLHASEFFECTIVEURL" id="-1363993667%2FClasslikes%2F474703126" data-filterable-set=":cdp:dokkaHtmlPartial/commonMain"></a>
+          <div class="table-row" data-togglable="ENTRY" data-filterable-current=":cdp:dokkaHtmlPartial/commonMain" data-filterable-set=":cdp:dokkaHtmlPartial/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-t-r-i-g-g-e-r-u-r-l-h-a-s-e-f-f-e-c-t-i-v-e-u-r-l/index.html">TRIGGERURLHASEFFECTIVEURL</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1363993667%2FClasslikes%2F474703126"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":cdp:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><div class="block"><div class="block"><div class="block"><span class="token annotation builtin">@</span><span data-unresolved-link="kotlinx.serialization/SerialName///PointingToDeclaration/"><span class="token annotation builtin">SerialName</span></span><span class="token punctuation">(</span><span>value<span class="token operator"> = </span><span class="breakable-word"><span class="token string">"TriggerUrlHasEffectiveUrl"</span></span></span><wbr><span class="token punctuation">)</span></div></div><a href="-t-r-i-g-g-e-r-u-r-l-h-a-s-e-f-f-e-c-t-i-v-e-u-r-l/index.html">TRIGGERURLHASEFFECTIVEURL</a></div></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-220747417%2FClasslikes%2F474703126" anchor-label="ACTIVATEDBEFORESTARTED" id="-220747417%2FClasslikes%2F474703126" data-filterable-set=":cdp:dokkaHtmlPartial/commonMain"></a>
+          <div class="table-row" data-togglable="ENTRY" data-filterable-current=":cdp:dokkaHtmlPartial/commonMain" data-filterable-set=":cdp:dokkaHtmlPartial/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-a-c-t-i-v-a-t-e-d-b-e-f-o-r-e-s-t-a-r-t-e-d/index.html">ACTIVATEDBEFORESTARTED</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-220747417%2FClasslikes%2F474703126"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":cdp:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><div class="block"><div class="block"><div class="block"><span class="token annotation builtin">@</span><span data-unresolved-link="kotlinx.serialization/SerialName///PointingToDeclaration/"><span class="token annotation builtin">SerialName</span></span><span class="token punctuation">(</span><span>value<span class="token operator"> = </span><span class="breakable-word"><span class="token string">"ActivatedBeforeStarted"</span></span></span><wbr><span class="token punctuation">)</span></div></div><a href="-a-c-t-i-v-a-t-e-d-b-e-f-o-r-e-s-t-a-r-t-e-d/index.html">ACTIVATEDBEFORESTARTED</a></div></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-194101596%2FClasslikes%2F474703126" anchor-label="INACTIVEPAGERESTRICTION" id="-194101596%2FClasslikes%2F474703126" data-filterable-set=":cdp:dokkaHtmlPartial/commonMain"></a>
+          <div class="table-row" data-togglable="ENTRY" data-filterable-current=":cdp:dokkaHtmlPartial/commonMain" data-filterable-set=":cdp:dokkaHtmlPartial/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-i-n-a-c-t-i-v-e-p-a-g-e-r-e-s-t-r-i-c-t-i-o-n/index.html">INACTIVEPAGERESTRICTION</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-194101596%2FClasslikes%2F474703126"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":cdp:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><div class="block"><div class="block"><div class="block"><span class="token annotation builtin">@</span><span data-unresolved-link="kotlinx.serialization/SerialName///PointingToDeclaration/"><span class="token annotation builtin">SerialName</span></span><span class="token punctuation">(</span><span>value<span class="token operator"> = </span><span class="breakable-word"><span class="token string">"InactivePageRestriction"</span></span></span><wbr><span class="token punctuation">)</span></div></div><a href="-i-n-a-c-t-i-v-e-p-a-g-e-r-e-s-t-r-i-c-t-i-o-n/index.html">INACTIVEPAGERESTRICTION</a></div></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1115355151%2FClasslikes%2F474703126" anchor-label="STARTFAILED" id="-1115355151%2FClasslikes%2F474703126" data-filterable-set=":cdp:dokkaHtmlPartial/commonMain"></a>
+          <div class="table-row" data-togglable="ENTRY" data-filterable-current=":cdp:dokkaHtmlPartial/commonMain" data-filterable-set=":cdp:dokkaHtmlPartial/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-s-t-a-r-t-f-a-i-l-e-d/index.html">STARTFAILED</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1115355151%2FClasslikes%2F474703126"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":cdp:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><div class="block"><div class="block"><div class="block"><span class="token annotation builtin">@</span><span data-unresolved-link="kotlinx.serialization/SerialName///PointingToDeclaration/"><span class="token annotation builtin">SerialName</span></span><span class="token punctuation">(</span><span>value<span class="token operator"> = </span><span class="breakable-word"><span class="token string">"StartFailed"</span></span></span><wbr><span class="token punctuation">)</span></div></div><a href="-s-t-a-r-t-f-a-i-l-e-d/index.html">STARTFAILED</a></div></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-211145536%2FClasslikes%2F474703126" anchor-label="TIMEOUTBACKGROUNDED" id="-211145536%2FClasslikes%2F474703126" data-filterable-set=":cdp:dokkaHtmlPartial/commonMain"></a>
+          <div class="table-row" data-togglable="ENTRY" data-filterable-current=":cdp:dokkaHtmlPartial/commonMain" data-filterable-set=":cdp:dokkaHtmlPartial/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-t-i-m-e-o-u-t-b-a-c-k-g-r-o-u-n-d-e-d/index.html">TIMEOUTBACKGROUNDED</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-211145536%2FClasslikes%2F474703126"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":cdp:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><div class="block"><div class="block"><div class="block"><span class="token annotation builtin">@</span><span data-unresolved-link="kotlinx.serialization/SerialName///PointingToDeclaration/"><span class="token annotation builtin">SerialName</span></span><span class="token punctuation">(</span><span>value<span class="token operator"> = </span><span class="breakable-word"><span class="token string">"TimeoutBackgrounded"</span></span></span><wbr><span class="token punctuation">)</span></div></div><a href="-t-i-m-e-o-u-t-b-a-c-k-g-r-o-u-n-d-e-d/index.html">TIMEOUTBACKGROUNDED</a></div></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1065897030%2FClasslikes%2F474703126" anchor-label="CROSSSITEREDIRECTININITIALNAVIGATION" id="1065897030%2FClasslikes%2F474703126" data-filterable-set=":cdp:dokkaHtmlPartial/commonMain"></a>
+          <div class="table-row" data-togglable="ENTRY" data-filterable-current=":cdp:dokkaHtmlPartial/commonMain" data-filterable-set=":cdp:dokkaHtmlPartial/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-c-r-o-s-s-s-i-t-e-r-e-d-i-r-e-c-t-i-n-i-n-i-t-i-a-l-n-a-v-i-g-a-t-i-o-n/index.html">CROSSSITEREDIRECTININITIALNAVIGATION</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1065897030%2FClasslikes%2F474703126"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":cdp:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><div class="block"><div class="block"><div class="block"><span class="token annotation builtin">@</span><span data-unresolved-link="kotlinx.serialization/SerialName///PointingToDeclaration/"><span class="token annotation builtin">SerialName</span></span><span class="token punctuation">(</span><span>value<span class="token operator"> = </span><span class="breakable-word"><span class="token string">"CrossSiteRedirectInInitialNavigation"</span></span></span><wbr><span class="token punctuation">)</span></div></div><a href="-c-r-o-s-s-s-i-t-e-r-e-d-i-r-e-c-t-i-n-i-n-i-t-i-a-l-n-a-v-i-g-a-t-i-o-n/index.html">CROSSSITEREDIRECTININITIALNAVIGATION</a></div></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1326400946%2FClasslikes%2F474703126" anchor-label="CROSSSITENAVIGATIONININITIALNAVIGATION" id="-1326400946%2FClasslikes%2F474703126" data-filterable-set=":cdp:dokkaHtmlPartial/commonMain"></a>
+          <div class="table-row" data-togglable="ENTRY" data-filterable-current=":cdp:dokkaHtmlPartial/commonMain" data-filterable-set=":cdp:dokkaHtmlPartial/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-c-r-o-s-s-s-i-t-e-n-a-v-i-g-a-t-i-o-n-i-n-i-n-i-t-i-a-l-n-a-v-i-g-a-t-i-o-n/index.html">CROSSSITENAVIGATIONININITIALNAVIGATION</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1326400946%2FClasslikes%2F474703126"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":cdp:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><div class="block"><div class="block"><div class="block"><span class="token annotation builtin">@</span><span data-unresolved-link="kotlinx.serialization/SerialName///PointingToDeclaration/"><span class="token annotation builtin">SerialName</span></span><span class="token punctuation">(</span><span>value<span class="token operator"> = </span><span class="breakable-word"><span class="token string">"CrossSiteNavigationInInitialNavigation"</span></span></span><wbr><span class="token punctuation">)</span></div></div><a href="-c-r-o-s-s-s-i-t-e-n-a-v-i-g-a-t-i-o-n-i-n-i-n-i-t-i-a-l-n-a-v-i-g-a-t-i-o-n/index.html">CROSSSITENAVIGATIONININITIALNAVIGATION</a></div></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="306896495%2FClasslikes%2F474703126" anchor-label="SAMESITECROSSORIGINREDIRECTNOTOPTINININITIALNAVIGATION" id="306896495%2FClasslikes%2F474703126" data-filterable-set=":cdp:dokkaHtmlPartial/commonMain"></a>
+          <div class="table-row" data-togglable="ENTRY" data-filterable-current=":cdp:dokkaHtmlPartial/commonMain" data-filterable-set=":cdp:dokkaHtmlPartial/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-s-a-m-e-s-i-t-e-c-r-o-s-s-o-r-i-g-i-n-r-e-d-i-r-e-c-t-n-o-t-o-p-t-i-n-i-n-i-n-i-t-i-a-l-n-a-v-i-g-a-t-i-o-n/index.html">SAMESITECROSSORIGINREDIRECTNOTOPTINININITIALNAVIGATION</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="306896495%2FClasslikes%2F474703126"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":cdp:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><div class="block"><div class="block"><div class="block"><span class="token annotation builtin">@</span><span data-unresolved-link="kotlinx.serialization/SerialName///PointingToDeclaration/"><span class="token annotation builtin">SerialName</span></span><span class="token punctuation">(</span><span>value<span class="token operator"> = </span><span class="breakable-word"><span class="token string">"SameSiteCrossOriginRedirectNotOptInInInitialNavigation"</span></span></span><wbr><span class="token punctuation">)</span></div></div><a href="-s-a-m-e-s-i-t-e-c-r-o-s-s-o-r-i-g-i-n-r-e-d-i-r-e-c-t-n-o-t-o-p-t-i-n-i-n-i-n-i-t-i-a-l-n-a-v-i-g-a-t-i-o-n/index.html">SAMESITECROSSORIGINREDIRECTNOTOPTINININITIALNAVIGATION</a></div></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1704448247%2FClasslikes%2F474703126" anchor-label="SAMESITECROSSORIGINNAVIGATIONNOTOPTINININITIALNAVIGATION" id="1704448247%2FClasslikes%2F474703126" data-filterable-set=":cdp:dokkaHtmlPartial/commonMain"></a>
+          <div class="table-row" data-togglable="ENTRY" data-filterable-current=":cdp:dokkaHtmlPartial/commonMain" data-filterable-set=":cdp:dokkaHtmlPartial/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-s-a-m-e-s-i-t-e-c-r-o-s-s-o-r-i-g-i-n-n-a-v-i-g-a-t-i-o-n-n-o-t-o-p-t-i-n-i-n-i-n-i-t-i-a-l-n-a-v-i-g-a-t-i-o-n/index.html">SAMESITECROSSORIGINNAVIGATIONNOTOPTINININITIALNAVIGATION</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1704448247%2FClasslikes%2F474703126"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":cdp:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><div class="block"><div class="block"><div class="block"><span class="token annotation builtin">@</span><span data-unresolved-link="kotlinx.serialization/SerialName///PointingToDeclaration/"><span class="token annotation builtin">SerialName</span></span><span class="token punctuation">(</span><span>value<span class="token operator"> = </span><span class="breakable-word"><span class="token string">"SameSiteCrossOriginNavigationNotOptInInInitialNavigation"</span></span></span><wbr><span class="token punctuation">)</span></div></div><a href="-s-a-m-e-s-i-t-e-c-r-o-s-s-o-r-i-g-i-n-n-a-v-i-g-a-t-i-o-n-n-o-t-o-p-t-i-n-i-n-i-n-i-t-i-a-l-n-a-v-i-g-a-t-i-o-n/index.html">SAMESITECROSSORIGINNAVIGATIONNOTOPTINININITIALNAVIGATION</a></div></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1712438495%2FClasslikes%2F474703126" anchor-label="ACTIVATIONNAVIGATIONPARAMETERMISMATCH" id="1712438495%2FClasslikes%2F474703126" data-filterable-set=":cdp:dokkaHtmlPartial/commonMain"></a>
+          <div class="table-row" data-togglable="ENTRY" data-filterable-current=":cdp:dokkaHtmlPartial/commonMain" data-filterable-set=":cdp:dokkaHtmlPartial/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-a-c-t-i-v-a-t-i-o-n-n-a-v-i-g-a-t-i-o-n-p-a-r-a-m-e-t-e-r-m-i-s-m-a-t-c-h/index.html">ACTIVATIONNAVIGATIONPARAMETERMISMATCH</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1712438495%2FClasslikes%2F474703126"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":cdp:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><div class="block"><div class="block"><div class="block"><span class="token annotation builtin">@</span><span data-unresolved-link="kotlinx.serialization/SerialName///PointingToDeclaration/"><span class="token annotation builtin">SerialName</span></span><span class="token punctuation">(</span><span>value<span class="token operator"> = </span><span class="breakable-word"><span class="token string">"ActivationNavigationParameterMismatch"</span></span></span><wbr><span class="token punctuation">)</span></div></div><a href="-a-c-t-i-v-a-t-i-o-n-n-a-v-i-g-a-t-i-o-n-p-a-r-a-m-e-t-e-r-m-i-s-m-a-t-c-h/index.html">ACTIVATIONNAVIGATIONPARAMETERMISMATCH</a></div></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-476809994%2FClasslikes%2F474703126" anchor-label="ACTIVATEDINBACKGROUND" id="-476809994%2FClasslikes%2F474703126" data-filterable-set=":cdp:dokkaHtmlPartial/commonMain"></a>
+          <div class="table-row" data-togglable="ENTRY" data-filterable-current=":cdp:dokkaHtmlPartial/commonMain" data-filterable-set=":cdp:dokkaHtmlPartial/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-a-c-t-i-v-a-t-e-d-i-n-b-a-c-k-g-r-o-u-n-d/index.html">ACTIVATEDINBACKGROUND</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-476809994%2FClasslikes%2F474703126"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":cdp:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><div class="block"><div class="block"><div class="block"><span class="token annotation builtin">@</span><span data-unresolved-link="kotlinx.serialization/SerialName///PointingToDeclaration/"><span class="token annotation builtin">SerialName</span></span><span class="token punctuation">(</span><span>value<span class="token operator"> = </span><span class="breakable-word"><span class="token string">"ActivatedInBackground"</span></span></span><wbr><span class="token punctuation">)</span></div></div><a href="-a-c-t-i-v-a-t-e-d-i-n-b-a-c-k-g-r-o-u-n-d/index.html">ACTIVATEDINBACKGROUND</a></div></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-875385008%2FClasslikes%2F474703126" anchor-label="EMBEDDERHOSTDISALLOWED" id="-875385008%2FClasslikes%2F474703126" data-filterable-set=":cdp:dokkaHtmlPartial/commonMain"></a>
+          <div class="table-row" data-togglable="ENTRY" data-filterable-current=":cdp:dokkaHtmlPartial/commonMain" data-filterable-set=":cdp:dokkaHtmlPartial/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-e-m-b-e-d-d-e-r-h-o-s-t-d-i-s-a-l-l-o-w-e-d/index.html">EMBEDDERHOSTDISALLOWED</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-875385008%2FClasslikes%2F474703126"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":cdp:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><div class="block"><div class="block"><div class="block"><span class="token annotation builtin">@</span><span data-unresolved-link="kotlinx.serialization/SerialName///PointingToDeclaration/"><span class="token annotation builtin">SerialName</span></span><span class="token punctuation">(</span><span>value<span class="token operator"> = </span><span class="breakable-word"><span class="token string">"EmbedderHostDisallowed"</span></span></span><wbr><span class="token punctuation">)</span></div></div><a href="-e-m-b-e-d-d-e-r-h-o-s-t-d-i-s-a-l-l-o-w-e-d/index.html">EMBEDDERHOSTDISALLOWED</a></div></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1823373771%2FClasslikes%2F474703126" anchor-label="ACTIVATIONNAVIGATIONDESTROYEDBEFORESUCCESS" id="1823373771%2FClasslikes%2F474703126" data-filterable-set=":cdp:dokkaHtmlPartial/commonMain"></a>
+          <div class="table-row" data-togglable="ENTRY" data-filterable-current=":cdp:dokkaHtmlPartial/commonMain" data-filterable-set=":cdp:dokkaHtmlPartial/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-a-c-t-i-v-a-t-i-o-n-n-a-v-i-g-a-t-i-o-n-d-e-s-t-r-o-y-e-d-b-e-f-o-r-e-s-u-c-c-e-s-s/index.html">ACTIVATIONNAVIGATIONDESTROYEDBEFORESUCCESS</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1823373771%2FClasslikes%2F474703126"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":cdp:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><div class="block"><div class="block"><div class="block"><span class="token annotation builtin">@</span><span data-unresolved-link="kotlinx.serialization/SerialName///PointingToDeclaration/"><span class="token annotation builtin">SerialName</span></span><span class="token punctuation">(</span><span>value<span class="token operator"> = </span><span class="breakable-word"><span class="token string">"ActivationNavigationDestroyedBeforeSuccess"</span></span></span><wbr><span class="token punctuation">)</span></div></div><a href="-a-c-t-i-v-a-t-i-o-n-n-a-v-i-g-a-t-i-o-n-d-e-s-t-r-o-y-e-d-b-e-f-o-r-e-s-u-c-c-e-s-s/index.html">ACTIVATIONNAVIGATIONDESTROYEDBEFORESUCCESS</a></div></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1980725116%2FClasslikes%2F474703126" anchor-label="TABCLOSEDBYUSERGESTURE" id="1980725116%2FClasslikes%2F474703126" data-filterable-set=":cdp:dokkaHtmlPartial/commonMain"></a>
+          <div class="table-row" data-togglable="ENTRY" data-filterable-current=":cdp:dokkaHtmlPartial/commonMain" data-filterable-set=":cdp:dokkaHtmlPartial/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-t-a-b-c-l-o-s-e-d-b-y-u-s-e-r-g-e-s-t-u-r-e/index.html">TABCLOSEDBYUSERGESTURE</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1980725116%2FClasslikes%2F474703126"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":cdp:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><div class="block"><div class="block"><div class="block"><span class="token annotation builtin">@</span><span data-unresolved-link="kotlinx.serialization/SerialName///PointingToDeclaration/"><span class="token annotation builtin">SerialName</span></span><span class="token punctuation">(</span><span>value<span class="token operator"> = </span><span class="breakable-word"><span class="token string">"TabClosedByUserGesture"</span></span></span><wbr><span class="token punctuation">)</span></div></div><a href="-t-a-b-c-l-o-s-e-d-b-y-u-s-e-r-g-e-s-t-u-r-e/index.html">TABCLOSEDBYUSERGESTURE</a></div></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1274141481%2FClasslikes%2F474703126" anchor-label="TABCLOSEDWITHOUTUSERGESTURE" id="1274141481%2FClasslikes%2F474703126" data-filterable-set=":cdp:dokkaHtmlPartial/commonMain"></a>
+          <div class="table-row" data-togglable="ENTRY" data-filterable-current=":cdp:dokkaHtmlPartial/commonMain" data-filterable-set=":cdp:dokkaHtmlPartial/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-t-a-b-c-l-o-s-e-d-w-i-t-h-o-u-t-u-s-e-r-g-e-s-t-u-r-e/index.html">TABCLOSEDWITHOUTUSERGESTURE</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1274141481%2FClasslikes%2F474703126"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":cdp:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><div class="block"><div class="block"><div class="block"><span class="token annotation builtin">@</span><span data-unresolved-link="kotlinx.serialization/SerialName///PointingToDeclaration/"><span class="token annotation builtin">SerialName</span></span><span class="token punctuation">(</span><span>value<span class="token operator"> = </span><span class="breakable-word"><span class="token string">"TabClosedWithoutUserGesture"</span></span></span><wbr><span class="token punctuation">)</span></div></div><a href="-t-a-b-c-l-o-s-e-d-w-i-t-h-o-u-t-u-s-e-r-g-e-s-t-u-r-e/index.html">TABCLOSEDWITHOUTUSERGESTURE</a></div></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-781521662%2FClasslikes%2F474703126" anchor-label="PRIMARYMAINFRAMERENDERERPROCESSCRASHED" id="-781521662%2FClasslikes%2F474703126" data-filterable-set=":cdp:dokkaHtmlPartial/commonMain"></a>
+          <div class="table-row" data-togglable="ENTRY" data-filterable-current=":cdp:dokkaHtmlPartial/commonMain" data-filterable-set=":cdp:dokkaHtmlPartial/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-p-r-i-m-a-r-y-m-a-i-n-f-r-a-m-e-r-e-n-d-e-r-e-r-p-r-o-c-e-s-s-c-r-a-s-h-e-d/index.html">PRIMARYMAINFRAMERENDERERPROCESSCRASHED</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-781521662%2FClasslikes%2F474703126"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":cdp:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><div class="block"><div class="block"><div class="block"><span class="token annotation builtin">@</span><span data-unresolved-link="kotlinx.serialization/SerialName///PointingToDeclaration/"><span class="token annotation builtin">SerialName</span></span><span class="token punctuation">(</span><span>value<span class="token operator"> = </span><span class="breakable-word"><span class="token string">"PrimaryMainFrameRendererProcessCrashed"</span></span></span><wbr><span class="token punctuation">)</span></div></div><a href="-p-r-i-m-a-r-y-m-a-i-n-f-r-a-m-e-r-e-n-d-e-r-e-r-p-r-o-c-e-s-s-c-r-a-s-h-e-d/index.html">PRIMARYMAINFRAMERENDERERPROCESSCRASHED</a></div></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1814001865%2FClasslikes%2F474703126" anchor-label="PRIMARYMAINFRAMERENDERERPROCESSKILLED" id="1814001865%2FClasslikes%2F474703126" data-filterable-set=":cdp:dokkaHtmlPartial/commonMain"></a>
+          <div class="table-row" data-togglable="ENTRY" data-filterable-current=":cdp:dokkaHtmlPartial/commonMain" data-filterable-set=":cdp:dokkaHtmlPartial/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-p-r-i-m-a-r-y-m-a-i-n-f-r-a-m-e-r-e-n-d-e-r-e-r-p-r-o-c-e-s-s-k-i-l-l-e-d/index.html">PRIMARYMAINFRAMERENDERERPROCESSKILLED</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1814001865%2FClasslikes%2F474703126"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":cdp:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><div class="block"><div class="block"><div class="block"><span class="token annotation builtin">@</span><span data-unresolved-link="kotlinx.serialization/SerialName///PointingToDeclaration/"><span class="token annotation builtin">SerialName</span></span><span class="token punctuation">(</span><span>value<span class="token operator"> = </span><span class="breakable-word"><span class="token string">"PrimaryMainFrameRendererProcessKilled"</span></span></span><wbr><span class="token punctuation">)</span></div></div><a href="-p-r-i-m-a-r-y-m-a-i-n-f-r-a-m-e-r-e-n-d-e-r-e-r-p-r-o-c-e-s-s-k-i-l-l-e-d/index.html">PRIMARYMAINFRAMERENDERERPROCESSKILLED</a></div></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="938056244%2FClasslikes%2F474703126" anchor-label="ACTIVATIONFRAMEPOLICYNOTCOMPATIBLE" id="938056244%2FClasslikes%2F474703126" data-filterable-set=":cdp:dokkaHtmlPartial/commonMain"></a>
+          <div class="table-row" data-togglable="ENTRY" data-filterable-current=":cdp:dokkaHtmlPartial/commonMain" data-filterable-set=":cdp:dokkaHtmlPartial/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-a-c-t-i-v-a-t-i-o-n-f-r-a-m-e-p-o-l-i-c-y-n-o-t-c-o-m-p-a-t-i-b-l-e/index.html">ACTIVATIONFRAMEPOLICYNOTCOMPATIBLE</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="938056244%2FClasslikes%2F474703126"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":cdp:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><div class="block"><div class="block"><div class="block"><span class="token annotation builtin">@</span><span data-unresolved-link="kotlinx.serialization/SerialName///PointingToDeclaration/"><span class="token annotation builtin">SerialName</span></span><span class="token punctuation">(</span><span>value<span class="token operator"> = </span><span class="breakable-word"><span class="token string">"ActivationFramePolicyNotCompatible"</span></span></span><wbr><span class="token punctuation">)</span></div></div><a href="-a-c-t-i-v-a-t-i-o-n-f-r-a-m-e-p-o-l-i-c-y-n-o-t-c-o-m-p-a-t-i-b-l-e/index.html">ACTIVATIONFRAMEPOLICYNOTCOMPATIBLE</a></div></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1754894379%2FClasslikes%2F474703126" anchor-label="PRELOADINGDISABLED" id="1754894379%2FClasslikes%2F474703126" data-filterable-set=":cdp:dokkaHtmlPartial/commonMain"></a>
+          <div class="table-row" data-togglable="ENTRY" data-filterable-current=":cdp:dokkaHtmlPartial/commonMain" data-filterable-set=":cdp:dokkaHtmlPartial/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-p-r-e-l-o-a-d-i-n-g-d-i-s-a-b-l-e-d/index.html">PRELOADINGDISABLED</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1754894379%2FClasslikes%2F474703126"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":cdp:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><div class="block"><div class="block"><div class="block"><span class="token annotation builtin">@</span><span data-unresolved-link="kotlinx.serialization/SerialName///PointingToDeclaration/"><span class="token annotation builtin">SerialName</span></span><span class="token punctuation">(</span><span>value<span class="token operator"> = </span><span class="breakable-word"><span class="token string">"PreloadingDisabled"</span></span></span><wbr><span class="token punctuation">)</span></div></div><a href="-p-r-e-l-o-a-d-i-n-g-d-i-s-a-b-l-e-d/index.html">PRELOADINGDISABLED</a></div></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1847736597%2FClasslikes%2F474703126" anchor-label="BATTERYSAVERENABLED" id="-1847736597%2FClasslikes%2F474703126" data-filterable-set=":cdp:dokkaHtmlPartial/commonMain"></a>
+          <div class="table-row" data-togglable="ENTRY" data-filterable-current=":cdp:dokkaHtmlPartial/commonMain" data-filterable-set=":cdp:dokkaHtmlPartial/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-b-a-t-t-e-r-y-s-a-v-e-r-e-n-a-b-l-e-d/index.html">BATTERYSAVERENABLED</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1847736597%2FClasslikes%2F474703126"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":cdp:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><div class="block"><div class="block"><div class="block"><span class="token annotation builtin">@</span><span data-unresolved-link="kotlinx.serialization/SerialName///PointingToDeclaration/"><span class="token annotation builtin">SerialName</span></span><span class="token punctuation">(</span><span>value<span class="token operator"> = </span><span class="breakable-word"><span class="token string">"BatterySaverEnabled"</span></span></span><wbr><span class="token punctuation">)</span></div></div><a href="-b-a-t-t-e-r-y-s-a-v-e-r-e-n-a-b-l-e-d/index.html">BATTERYSAVERENABLED</a></div></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-258696820%2FClasslikes%2F474703126" anchor-label="ACTIVATEDDURINGMAINFRAMENAVIGATION" id="-258696820%2FClasslikes%2F474703126" data-filterable-set=":cdp:dokkaHtmlPartial/commonMain"></a>
+          <div class="table-row" data-togglable="ENTRY" data-filterable-current=":cdp:dokkaHtmlPartial/commonMain" data-filterable-set=":cdp:dokkaHtmlPartial/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-a-c-t-i-v-a-t-e-d-d-u-r-i-n-g-m-a-i-n-f-r-a-m-e-n-a-v-i-g-a-t-i-o-n/index.html">ACTIVATEDDURINGMAINFRAMENAVIGATION</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-258696820%2FClasslikes%2F474703126"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":cdp:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><div class="block"><div class="block"><div class="block"><span class="token annotation builtin">@</span><span data-unresolved-link="kotlinx.serialization/SerialName///PointingToDeclaration/"><span class="token annotation builtin">SerialName</span></span><span class="token punctuation">(</span><span>value<span class="token operator"> = </span><span class="breakable-word"><span class="token string">"ActivatedDuringMainFrameNavigation"</span></span></span><wbr><span class="token punctuation">)</span></div></div><a href="-a-c-t-i-v-a-t-e-d-d-u-r-i-n-g-m-a-i-n-f-r-a-m-e-n-a-v-i-g-a-t-i-o-n/index.html">ACTIVATEDDURINGMAINFRAMENAVIGATION</a></div></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="559015633%2FClasslikes%2F474703126" anchor-label="PRELOADINGUNSUPPORTEDBYWEBCONTENTS" id="559015633%2FClasslikes%2F474703126" data-filterable-set=":cdp:dokkaHtmlPartial/commonMain"></a>
+          <div class="table-row" data-togglable="ENTRY" data-filterable-current=":cdp:dokkaHtmlPartial/commonMain" data-filterable-set=":cdp:dokkaHtmlPartial/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-p-r-e-l-o-a-d-i-n-g-u-n-s-u-p-p-o-r-t-e-d-b-y-w-e-b-c-o-n-t-e-n-t-s/index.html">PRELOADINGUNSUPPORTEDBYWEBCONTENTS</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="559015633%2FClasslikes%2F474703126"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":cdp:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><div class="block"><div class="block"><div class="block"><span class="token annotation builtin">@</span><span data-unresolved-link="kotlinx.serialization/SerialName///PointingToDeclaration/"><span class="token annotation builtin">SerialName</span></span><span class="token punctuation">(</span><span>value<span class="token operator"> = </span><span class="breakable-word"><span class="token string">"PreloadingUnsupportedByWebContents"</span></span></span><wbr><span class="token punctuation">)</span></div></div><a href="-p-r-e-l-o-a-d-i-n-g-u-n-s-u-p-p-o-r-t-e-d-b-y-w-e-b-c-o-n-t-e-n-t-s/index.html">PRELOADINGUNSUPPORTEDBYWEBCONTENTS</a></div></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1945764310%2FClasslikes%2F474703126" anchor-label="CROSSSITEREDIRECTINMAINFRAMENAVIGATION" id="1945764310%2FClasslikes%2F474703126" data-filterable-set=":cdp:dokkaHtmlPartial/commonMain"></a>
+          <div class="table-row" data-togglable="ENTRY" data-filterable-current=":cdp:dokkaHtmlPartial/commonMain" data-filterable-set=":cdp:dokkaHtmlPartial/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-c-r-o-s-s-s-i-t-e-r-e-d-i-r-e-c-t-i-n-m-a-i-n-f-r-a-m-e-n-a-v-i-g-a-t-i-o-n/index.html">CROSSSITEREDIRECTINMAINFRAMENAVIGATION</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1945764310%2FClasslikes%2F474703126"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":cdp:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><div class="block"><div class="block"><div class="block"><span class="token annotation builtin">@</span><span data-unresolved-link="kotlinx.serialization/SerialName///PointingToDeclaration/"><span class="token annotation builtin">SerialName</span></span><span class="token punctuation">(</span><span>value<span class="token operator"> = </span><span class="breakable-word"><span class="token string">"CrossSiteRedirectInMainFrameNavigation"</span></span></span><wbr><span class="token punctuation">)</span></div></div><a href="-c-r-o-s-s-s-i-t-e-r-e-d-i-r-e-c-t-i-n-m-a-i-n-f-r-a-m-e-n-a-v-i-g-a-t-i-o-n/index.html">CROSSSITEREDIRECTINMAINFRAMENAVIGATION</a></div></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="754912734%2FClasslikes%2F474703126" anchor-label="CROSSSITENAVIGATIONINMAINFRAMENAVIGATION" id="754912734%2FClasslikes%2F474703126" data-filterable-set=":cdp:dokkaHtmlPartial/commonMain"></a>
+          <div class="table-row" data-togglable="ENTRY" data-filterable-current=":cdp:dokkaHtmlPartial/commonMain" data-filterable-set=":cdp:dokkaHtmlPartial/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-c-r-o-s-s-s-i-t-e-n-a-v-i-g-a-t-i-o-n-i-n-m-a-i-n-f-r-a-m-e-n-a-v-i-g-a-t-i-o-n/index.html">CROSSSITENAVIGATIONINMAINFRAMENAVIGATION</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="754912734%2FClasslikes%2F474703126"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":cdp:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><div class="block"><div class="block"><div class="block"><span class="token annotation builtin">@</span><span data-unresolved-link="kotlinx.serialization/SerialName///PointingToDeclaration/"><span class="token annotation builtin">SerialName</span></span><span class="token punctuation">(</span><span>value<span class="token operator"> = </span><span class="breakable-word"><span class="token string">"CrossSiteNavigationInMainFrameNavigation"</span></span></span><wbr><span class="token punctuation">)</span></div></div><a href="-c-r-o-s-s-s-i-t-e-n-a-v-i-g-a-t-i-o-n-i-n-m-a-i-n-f-r-a-m-e-n-a-v-i-g-a-t-i-o-n/index.html">CROSSSITENAVIGATIONINMAINFRAMENAVIGATION</a></div></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1604276801%2FClasslikes%2F474703126" anchor-label="SAMESITECROSSORIGINREDIRECTNOTOPTININMAINFRAMENAVIGATION" id="-1604276801%2FClasslikes%2F474703126" data-filterable-set=":cdp:dokkaHtmlPartial/commonMain"></a>
+          <div class="table-row" data-togglable="ENTRY" data-filterable-current=":cdp:dokkaHtmlPartial/commonMain" data-filterable-set=":cdp:dokkaHtmlPartial/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-s-a-m-e-s-i-t-e-c-r-o-s-s-o-r-i-g-i-n-r-e-d-i-r-e-c-t-n-o-t-o-p-t-i-n-i-n-m-a-i-n-f-r-a-m-e-n-a-v-i-g-a-t-i-o-n/index.html">SAMESITECROSSORIGINREDIRECTNOTOPTININMAINFRAMENAVIGATION</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1604276801%2FClasslikes%2F474703126"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":cdp:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><div class="block"><div class="block"><div class="block"><span class="token annotation builtin">@</span><span data-unresolved-link="kotlinx.serialization/SerialName///PointingToDeclaration/"><span class="token annotation builtin">SerialName</span></span><span class="token punctuation">(</span><span>value<span class="token operator"> = </span><span class="breakable-word"><span class="token string">"SameSiteCrossOriginRedirectNotOptInInMainFrameNavigation"</span></span></span><wbr><span class="token punctuation">)</span></div></div><a href="-s-a-m-e-s-i-t-e-c-r-o-s-s-o-r-i-g-i-n-r-e-d-i-r-e-c-t-n-o-t-o-p-t-i-n-i-n-m-a-i-n-f-r-a-m-e-n-a-v-i-g-a-t-i-o-n/index.html">SAMESITECROSSORIGINREDIRECTNOTOPTININMAINFRAMENAVIGATION</a></div></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1413160519%2FClasslikes%2F474703126" anchor-label="SAMESITECROSSORIGINNAVIGATIONNOTOPTININMAINFRAMENAVIGATION" id="1413160519%2FClasslikes%2F474703126" data-filterable-set=":cdp:dokkaHtmlPartial/commonMain"></a>
+          <div class="table-row" data-togglable="ENTRY" data-filterable-current=":cdp:dokkaHtmlPartial/commonMain" data-filterable-set=":cdp:dokkaHtmlPartial/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-s-a-m-e-s-i-t-e-c-r-o-s-s-o-r-i-g-i-n-n-a-v-i-g-a-t-i-o-n-n-o-t-o-p-t-i-n-i-n-m-a-i-n-f-r-a-m-e-n-a-v-i-g-a-t-i-o-n/index.html">SAMESITECROSSORIGINNAVIGATIONNOTOPTININMAINFRAMENAVIGATION</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1413160519%2FClasslikes%2F474703126"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":cdp:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><div class="block"><div class="block"><div class="block"><span class="token annotation builtin">@</span><span data-unresolved-link="kotlinx.serialization/SerialName///PointingToDeclaration/"><span class="token annotation builtin">SerialName</span></span><span class="token punctuation">(</span><span>value<span class="token operator"> = </span><span class="breakable-word"><span class="token string">"SameSiteCrossOriginNavigationNotOptInInMainFrameNavigation"</span></span></span><wbr><span class="token punctuation">)</span></div></div><a href="-s-a-m-e-s-i-t-e-c-r-o-s-s-o-r-i-g-i-n-n-a-v-i-g-a-t-i-o-n-n-o-t-o-p-t-i-n-i-n-m-a-i-n-f-r-a-m-e-n-a-v-i-g-a-t-i-o-n/index.html">SAMESITECROSSORIGINNAVIGATIONNOTOPTININMAINFRAMENAVIGATION</a></div></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="344329285%2FClasslikes%2F474703126" anchor-label="MEMORYPRESSUREONTRIGGER" id="344329285%2FClasslikes%2F474703126" data-filterable-set=":cdp:dokkaHtmlPartial/commonMain"></a>
+          <div class="table-row" data-togglable="ENTRY" data-filterable-current=":cdp:dokkaHtmlPartial/commonMain" data-filterable-set=":cdp:dokkaHtmlPartial/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-m-e-m-o-r-y-p-r-e-s-s-u-r-e-o-n-t-r-i-g-g-e-r/index.html">MEMORYPRESSUREONTRIGGER</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="344329285%2FClasslikes%2F474703126"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":cdp:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><div class="block"><div class="block"><div class="block"><span class="token annotation builtin">@</span><span data-unresolved-link="kotlinx.serialization/SerialName///PointingToDeclaration/"><span class="token annotation builtin">SerialName</span></span><span class="token punctuation">(</span><span>value<span class="token operator"> = </span><span class="breakable-word"><span class="token string">"MemoryPressureOnTrigger"</span></span></span><wbr><span class="token punctuation">)</span></div></div><a href="-m-e-m-o-r-y-p-r-e-s-s-u-r-e-o-n-t-r-i-g-g-e-r/index.html">MEMORYPRESSUREONTRIGGER</a></div></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-44355657%2FClasslikes%2F474703126" anchor-label="MEMORYPRESSUREAFTERTRIGGERED" id="-44355657%2FClasslikes%2F474703126" data-filterable-set=":cdp:dokkaHtmlPartial/commonMain"></a>
+          <div class="table-row" data-togglable="ENTRY" data-filterable-current=":cdp:dokkaHtmlPartial/commonMain" data-filterable-set=":cdp:dokkaHtmlPartial/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-m-e-m-o-r-y-p-r-e-s-s-u-r-e-a-f-t-e-r-t-r-i-g-g-e-r-e-d/index.html">MEMORYPRESSUREAFTERTRIGGERED</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-44355657%2FClasslikes%2F474703126"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":cdp:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><div class="block"><div class="block"><div class="block"><span class="token annotation builtin">@</span><span data-unresolved-link="kotlinx.serialization/SerialName///PointingToDeclaration/"><span class="token annotation builtin">SerialName</span></span><span class="token punctuation">(</span><span>value<span class="token operator"> = </span><span class="breakable-word"><span class="token string">"MemoryPressureAfterTriggered"</span></span></span><wbr><span class="token punctuation">)</span></div></div><a href="-m-e-m-o-r-y-p-r-e-s-s-u-r-e-a-f-t-e-r-t-r-i-g-g-e-r-e-d/index.html">MEMORYPRESSUREAFTERTRIGGERED</a></div></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1872374904%2FClasslikes%2F474703126" anchor-label="PRERENDERINGDISABLEDBYDEVTOOLS" id="1872374904%2FClasslikes%2F474703126" data-filterable-set=":cdp:dokkaHtmlPartial/commonMain"></a>
+          <div class="table-row" data-togglable="ENTRY" data-filterable-current=":cdp:dokkaHtmlPartial/commonMain" data-filterable-set=":cdp:dokkaHtmlPartial/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-p-r-e-r-e-n-d-e-r-i-n-g-d-i-s-a-b-l-e-d-b-y-d-e-v-t-o-o-l-s/index.html">PRERENDERINGDISABLEDBYDEVTOOLS</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1872374904%2FClasslikes%2F474703126"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":cdp:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><div class="block"><div class="block"><div class="block"><span class="token annotation builtin">@</span><span data-unresolved-link="kotlinx.serialization/SerialName///PointingToDeclaration/"><span class="token annotation builtin">SerialName</span></span><span class="token punctuation">(</span><span>value<span class="token operator"> = </span><span class="breakable-word"><span class="token string">"PrerenderingDisabledByDevTools"</span></span></span><wbr><span class="token punctuation">)</span></div></div><a href="-p-r-e-r-e-n-d-e-r-i-n-g-d-i-s-a-b-l-e-d-b-y-d-e-v-t-o-o-l-s/index.html">PRERENDERINGDISABLEDBYDEVTOOLS</a></div></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="751879895%2FClasslikes%2F474703126" anchor-label="SPECULATIONRULEREMOVED" id="751879895%2FClasslikes%2F474703126" data-filterable-set=":cdp:dokkaHtmlPartial/commonMain"></a>
+          <div class="table-row" data-togglable="ENTRY" data-filterable-current=":cdp:dokkaHtmlPartial/commonMain" data-filterable-set=":cdp:dokkaHtmlPartial/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-s-p-e-c-u-l-a-t-i-o-n-r-u-l-e-r-e-m-o-v-e-d/index.html">SPECULATIONRULEREMOVED</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="751879895%2FClasslikes%2F474703126"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":cdp:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><div class="block"><div class="block"><div class="block"><span class="token annotation builtin">@</span><span data-unresolved-link="kotlinx.serialization/SerialName///PointingToDeclaration/"><span class="token annotation builtin">SerialName</span></span><span class="token punctuation">(</span><span>value<span class="token operator"> = </span><span class="breakable-word"><span class="token string">"SpeculationRuleRemoved"</span></span></span><wbr><span class="token punctuation">)</span></div></div><a href="-s-p-e-c-u-l-a-t-i-o-n-r-u-l-e-r-e-m-o-v-e-d/index.html">SPECULATIONRULEREMOVED</a></div></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="228684464%2FClasslikes%2F474703126" anchor-label="ACTIVATEDWITHAUXILIARYBROWSINGCONTEXTS" id="228684464%2FClasslikes%2F474703126" data-filterable-set=":cdp:dokkaHtmlPartial/commonMain"></a>
+          <div class="table-row" data-togglable="ENTRY" data-filterable-current=":cdp:dokkaHtmlPartial/commonMain" data-filterable-set=":cdp:dokkaHtmlPartial/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-a-c-t-i-v-a-t-e-d-w-i-t-h-a-u-x-i-l-i-a-r-y-b-r-o-w-s-i-n-g-c-o-n-t-e-x-t-s/index.html">ACTIVATEDWITHAUXILIARYBROWSINGCONTEXTS</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="228684464%2FClasslikes%2F474703126"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":cdp:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><div class="block"><div class="block"><div class="block"><span class="token annotation builtin">@</span><span data-unresolved-link="kotlinx.serialization/SerialName///PointingToDeclaration/"><span class="token annotation builtin">SerialName</span></span><span class="token punctuation">(</span><span>value<span class="token operator"> = </span><span class="breakable-word"><span class="token string">"ActivatedWithAuxiliaryBrowsingContexts"</span></span></span><wbr><span class="token punctuation">)</span></div></div><a href="-a-c-t-i-v-a-t-e-d-w-i-t-h-a-u-x-i-l-i-a-r-y-b-r-o-w-s-i-n-g-c-o-n-t-e-x-t-s/index.html">ACTIVATEDWITHAUXILIARYBROWSINGCONTEXTS</a></div></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-678774859%2FClasslikes%2F474703126" anchor-label="MAXNUMOFRUNNINGEAGERPRERENDERSEXCEEDED" id="-678774859%2FClasslikes%2F474703126" data-filterable-set=":cdp:dokkaHtmlPartial/commonMain"></a>
+          <div class="table-row" data-togglable="ENTRY" data-filterable-current=":cdp:dokkaHtmlPartial/commonMain" data-filterable-set=":cdp:dokkaHtmlPartial/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-m-a-x-n-u-m-o-f-r-u-n-n-i-n-g-e-a-g-e-r-p-r-e-r-e-n-d-e-r-s-e-x-c-e-e-d-e-d/index.html">MAXNUMOFRUNNINGEAGERPRERENDERSEXCEEDED</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-678774859%2FClasslikes%2F474703126"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":cdp:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><div class="block"><div class="block"><div class="block"><span class="token annotation builtin">@</span><span data-unresolved-link="kotlinx.serialization/SerialName///PointingToDeclaration/"><span class="token annotation builtin">SerialName</span></span><span class="token punctuation">(</span><span>value<span class="token operator"> = </span><span class="breakable-word"><span class="token string">"MaxNumOfRunningEagerPrerendersExceeded"</span></span></span><wbr><span class="token punctuation">)</span></div></div><a href="-m-a-x-n-u-m-o-f-r-u-n-n-i-n-g-e-a-g-e-r-p-r-e-r-e-n-d-e-r-s-e-x-c-e-e-d-e-d/index.html">MAXNUMOFRUNNINGEAGERPRERENDERSEXCEEDED</a></div></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="519090160%2FClasslikes%2F474703126" anchor-label="MAXNUMOFRUNNINGNONEAGERPRERENDERSEXCEEDED" id="519090160%2FClasslikes%2F474703126" data-filterable-set=":cdp:dokkaHtmlPartial/commonMain"></a>
+          <div class="table-row" data-togglable="ENTRY" data-filterable-current=":cdp:dokkaHtmlPartial/commonMain" data-filterable-set=":cdp:dokkaHtmlPartial/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-m-a-x-n-u-m-o-f-r-u-n-n-i-n-g-n-o-n-e-a-g-e-r-p-r-e-r-e-n-d-e-r-s-e-x-c-e-e-d-e-d/index.html">MAXNUMOFRUNNINGNONEAGERPRERENDERSEXCEEDED</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="519090160%2FClasslikes%2F474703126"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":cdp:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><div class="block"><div class="block"><div class="block"><span class="token annotation builtin">@</span><span data-unresolved-link="kotlinx.serialization/SerialName///PointingToDeclaration/"><span class="token annotation builtin">SerialName</span></span><span class="token punctuation">(</span><span>value<span class="token operator"> = </span><span class="breakable-word"><span class="token string">"MaxNumOfRunningNonEagerPrerendersExceeded"</span></span></span><wbr><span class="token punctuation">)</span></div></div><a href="-m-a-x-n-u-m-o-f-r-u-n-n-i-n-g-n-o-n-e-a-g-e-r-p-r-e-r-e-n-d-e-r-s-e-x-c-e-e-d-e-d/index.html">MAXNUMOFRUNNINGNONEAGERPRERENDERSEXCEEDED</a></div></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1383286269%2FClasslikes%2F474703126" anchor-label="MAXNUMOFRUNNINGEMBEDDERPRERENDERSEXCEEDED" id="1383286269%2FClasslikes%2F474703126" data-filterable-set=":cdp:dokkaHtmlPartial/commonMain"></a>
+          <div class="table-row" data-togglable="ENTRY" data-filterable-current=":cdp:dokkaHtmlPartial/commonMain" data-filterable-set=":cdp:dokkaHtmlPartial/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-m-a-x-n-u-m-o-f-r-u-n-n-i-n-g-e-m-b-e-d-d-e-r-p-r-e-r-e-n-d-e-r-s-e-x-c-e-e-d-e-d/index.html">MAXNUMOFRUNNINGEMBEDDERPRERENDERSEXCEEDED</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1383286269%2FClasslikes%2F474703126"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":cdp:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><div class="block"><div class="block"><div class="block"><span class="token annotation builtin">@</span><span data-unresolved-link="kotlinx.serialization/SerialName///PointingToDeclaration/"><span class="token annotation builtin">SerialName</span></span><span class="token punctuation">(</span><span>value<span class="token operator"> = </span><span class="breakable-word"><span class="token string">"MaxNumOfRunningEmbedderPrerendersExceeded"</span></span></span><wbr><span class="token punctuation">)</span></div></div><a href="-m-a-x-n-u-m-o-f-r-u-n-n-i-n-g-e-m-b-e-d-d-e-r-p-r-e-r-e-n-d-e-r-s-e-x-c-e-e-d-e-d/index.html">MAXNUMOFRUNNINGEMBEDDERPRERENDERSEXCEEDED</a></div></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1842670606%2FClasslikes%2F474703126" anchor-label="PRERENDERINGURLHASEFFECTIVEURL" id="-1842670606%2FClasslikes%2F474703126" data-filterable-set=":cdp:dokkaHtmlPartial/commonMain"></a>
+          <div class="table-row" data-togglable="ENTRY" data-filterable-current=":cdp:dokkaHtmlPartial/commonMain" data-filterable-set=":cdp:dokkaHtmlPartial/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-p-r-e-r-e-n-d-e-r-i-n-g-u-r-l-h-a-s-e-f-f-e-c-t-i-v-e-u-r-l/index.html">PRERENDERINGURLHASEFFECTIVEURL</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1842670606%2FClasslikes%2F474703126"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":cdp:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><div class="block"><div class="block"><div class="block"><span class="token annotation builtin">@</span><span data-unresolved-link="kotlinx.serialization/SerialName///PointingToDeclaration/"><span class="token annotation builtin">SerialName</span></span><span class="token punctuation">(</span><span>value<span class="token operator"> = </span><span class="breakable-word"><span class="token string">"PrerenderingUrlHasEffectiveUrl"</span></span></span><wbr><span class="token punctuation">)</span></div></div><a href="-p-r-e-r-e-n-d-e-r-i-n-g-u-r-l-h-a-s-e-f-f-e-c-t-i-v-e-u-r-l/index.html">PRERENDERINGURLHASEFFECTIVEURL</a></div></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="541783149%2FClasslikes%2F474703126" anchor-label="REDIRECTEDPRERENDERINGURLHASEFFECTIVEURL" id="541783149%2FClasslikes%2F474703126" data-filterable-set=":cdp:dokkaHtmlPartial/commonMain"></a>
+          <div class="table-row" data-togglable="ENTRY" data-filterable-current=":cdp:dokkaHtmlPartial/commonMain" data-filterable-set=":cdp:dokkaHtmlPartial/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-r-e-d-i-r-e-c-t-e-d-p-r-e-r-e-n-d-e-r-i-n-g-u-r-l-h-a-s-e-f-f-e-c-t-i-v-e-u-r-l/index.html">REDIRECTEDPRERENDERINGURLHASEFFECTIVEURL</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="541783149%2FClasslikes%2F474703126"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":cdp:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><div class="block"><div class="block"><div class="block"><span class="token annotation builtin">@</span><span data-unresolved-link="kotlinx.serialization/SerialName///PointingToDeclaration/"><span class="token annotation builtin">SerialName</span></span><span class="token punctuation">(</span><span>value<span class="token operator"> = </span><span class="breakable-word"><span class="token string">"RedirectedPrerenderingUrlHasEffectiveUrl"</span></span></span><wbr><span class="token punctuation">)</span></div></div><a href="-r-e-d-i-r-e-c-t-e-d-p-r-e-r-e-n-d-e-r-i-n-g-u-r-l-h-a-s-e-f-f-e-c-t-i-v-e-u-r-l/index.html">REDIRECTEDPRERENDERINGURLHASEFFECTIVEURL</a></div></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1924404287%2FClasslikes%2F474703126" anchor-label="ACTIVATIONURLHASEFFECTIVEURL" id="1924404287%2FClasslikes%2F474703126" data-filterable-set=":cdp:dokkaHtmlPartial/commonMain"></a>
+          <div class="table-row" data-togglable="ENTRY" data-filterable-current=":cdp:dokkaHtmlPartial/commonMain" data-filterable-set=":cdp:dokkaHtmlPartial/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-a-c-t-i-v-a-t-i-o-n-u-r-l-h-a-s-e-f-f-e-c-t-i-v-e-u-r-l/index.html">ACTIVATIONURLHASEFFECTIVEURL</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1924404287%2FClasslikes%2F474703126"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":cdp:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><div class="block"><div class="block"><div class="block"><span class="token annotation builtin">@</span><span data-unresolved-link="kotlinx.serialization/SerialName///PointingToDeclaration/"><span class="token annotation builtin">SerialName</span></span><span class="token punctuation">(</span><span>value<span class="token operator"> = </span><span class="breakable-word"><span class="token string">"ActivationUrlHasEffectiveUrl"</span></span></span><wbr><span class="token punctuation">)</span></div></div><a href="-a-c-t-i-v-a-t-i-o-n-u-r-l-h-a-s-e-f-f-e-c-t-i-v-e-u-r-l/index.html">ACTIVATIONURLHASEFFECTIVEURL</a></div></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div data-togglable="PROPERTY">
+        <h2 class="">Properties</h2>
+        <div class="table"><a data-name="445506000%2FProperties%2F474703126" anchor-label="entries" id="445506000%2FProperties%2F474703126" data-filterable-set=":cdp:dokkaHtmlPartial/commonMain"></a>
+          <div class="table-row" data-filterable-current=":cdp:dokkaHtmlPartial/commonMain" data-filterable-set=":cdp:dokkaHtmlPartial/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="entries.html"><span><span>entries</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="445506000%2FProperties%2F474703126"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":cdp:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword">val </span><a href="entries.html">entries</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin.enums/-enum-entries/index.html">EnumEntries</a><span class="token operator">&lt;</span><a href="index.html">Preload.PrerenderFinalStatus</a><span class="token operator">&gt;</span></div><div class="brief "><p class="paragraph">Returns a representation of an immutable list of all enum entries, in the order they're declared.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-372974862%2FProperties%2F474703126" anchor-label="name" id="-372974862%2FProperties%2F474703126" data-filterable-set=":cdp:dokkaHtmlPartial/commonMain"></a>
+          <div class="table-row" data-filterable-current=":cdp:dokkaHtmlPartial/commonMain" data-filterable-set=":cdp:dokkaHtmlPartial/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="../../-web-authn/-authenticator-transport/-i-n-t-e-r-n-a-l/index.html#-372974862%2FProperties%2F474703126"><span><span>name</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-372974862%2FProperties%2F474703126"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":cdp:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword">val </span><a href="../../-web-authn/-authenticator-transport/-i-n-t-e-r-n-a-l/index.html#-372974862%2FProperties%2F474703126">name</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-739389684%2FProperties%2F474703126" anchor-label="ordinal" id="-739389684%2FProperties%2F474703126" data-filterable-set=":cdp:dokkaHtmlPartial/commonMain"></a>
+          <div class="table-row" data-filterable-current=":cdp:dokkaHtmlPartial/commonMain" data-filterable-set=":cdp:dokkaHtmlPartial/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="../../-web-authn/-authenticator-transport/-i-n-t-e-r-n-a-l/index.html#-739389684%2FProperties%2F474703126"><span><span>ordinal</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-739389684%2FProperties%2F474703126"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":cdp:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword">val </span><a href="../../-web-authn/-authenticator-transport/-i-n-t-e-r-n-a-l/index.html#-739389684%2FProperties%2F474703126">ordinal</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-int/index.html">Int</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div data-togglable="FUNCTION">
+        <h2 class="">Functions</h2>
+        <div class="table"><a data-name="-1563988532%2FFunctions%2F474703126" anchor-label="valueOf" id="-1563988532%2FFunctions%2F474703126" data-filterable-set=":cdp:dokkaHtmlPartial/commonMain"></a>
+          <div class="table-row" data-filterable-current=":cdp:dokkaHtmlPartial/commonMain" data-filterable-set=":cdp:dokkaHtmlPartial/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="value-of.html"><span>value</span><wbr><span><span>Of</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1563988532%2FFunctions%2F474703126"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":cdp:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword">fun </span><a href="value-of.html"><span class="token function">valueOf</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">value<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="index.html">Preload.PrerenderFinalStatus</a></div><div class="brief "><p class="paragraph">Returns the enum constant of this type with the specified name. The string must match exactly an identifier used to declare an enum constant in this type. (Extraneous whitespace characters are not permitted.)</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-2001203240%2FFunctions%2F474703126" anchor-label="values" id="-2001203240%2FFunctions%2F474703126" data-filterable-set=":cdp:dokkaHtmlPartial/commonMain"></a>
+          <div class="table-row" data-filterable-current=":cdp:dokkaHtmlPartial/commonMain" data-filterable-set=":cdp:dokkaHtmlPartial/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="values.html"><span><span>values</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-2001203240%2FFunctions%2F474703126"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":cdp:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword">fun </span><a href="values.html"><span class="token function">values</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-array/index.html">Array</a><span class="token operator">&lt;</span><a href="index.html">Preload.PrerenderFinalStatus</a><span class="token operator">&gt;</span></div><div class="brief "><p class="paragraph">Returns an array containing the constants of this enum type, in the order they're declared.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    <div class="footer">
+        <a href="#content" id="go-to-top-link" class="footer--button footer--button_go-to-top"></a>
+        <span>© 2025 Copyright</span>
+        <span class="pull-right">
+            <span>Generated by </span>
+            <a class="footer--link footer--link_external" href="https://github.com/Kotlin/dokka">
+                <span>dokka</span>
+            </a>
+        </span>
+    </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

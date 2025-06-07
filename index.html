@@ -77,6 +77,88 @@
 <div class="main-content" id="content" pageIds="kdriver::.ext/allModules///PointingToDeclaration//0">
   <div class="breadcrumbs"></div>
   <div class="cover ">
+    <div class="cover ">
+      <h1 class="">kdriver</h1>
+      <p class="paragraph">LICENSE <a href=""></a> <a href=""></a> <a href=""></a> <a href="https://codecov.io/github/guimauvedigital/kdriver"></a> <a href="https://www.codefactor.io/repository/github/guimauvedigital/kdriver"></a> <a href="https://www.codetriage.com/guimauvedigital/kdriver"><img alt="Open Source Helpers" src="https://www.codetriage.com/guimauvedigital/kdriver/badges/users.svg"></a></p>
+      <blockquote class="quotation">
+        <p class="paragraph">This project is a Kotlin port of <a href="https://github.com/stephanlensky">@stephanlensky</a>'s awesome Python library <a href="https://github.com/stephanlensky/zendriver">zendriver</a>, built to bring the same simplicity and power of CDP-based automation to the JVM world.</p>
+      </blockquote>
+      <p class="paragraph"><strong>Documentation:</strong> <a href="https://kdriver.dev">kdriver.dev</a></p>
+      <p class="paragraph">kdriver is a blazing fast, coroutine-first, undetectable web scraping / browser automation library for Kotlin. It uses the Chrome DevTools Protocol (CDP) under the hood to interact with real Chrome instances, offering a sleek alternative to heavy tools like Selenium or Puppeteer — all without relying on WebDriver.</p>
+      <h2 class="">Features</h2>
+      <ul>
+        <li>
+          <p class="paragraph"><strong>Undetectable</strong> – Like its Python counterpart, kdriver speaks CDP directly, making it (almost) impossible for sites   to detect.</p>
+        </li>
+        <li>
+          <p class="paragraph"><strong>Blazing fast</strong> – CDP is lightweight and extremely performant. Combined with Kotlin coroutines, you get low-latency   scraping and automation.</p>
+        </li>
+        <li>
+          <p class="paragraph"><strong>Simple and powerful API</strong> – Designed to get you up and running with just a few lines of idiomatic Kotlin.</p>
+        </li>
+        <li>
+          <p class="paragraph"><strong>No external dependencies</strong> – kdriver interacts directly with the browser using WebSockets and JSON — no need for   Chromium wrappers or native libraries.</p>
+        </li>
+        <li>
+          <p class="paragraph"><strong>Session and cookie management</strong> – Start with a clean profile every time or load/save cookies between runs.</p>
+        </li>
+        <li>
+          <p class="paragraph"><strong>Element utilities</strong> – Coming soon: intuitive APIs to query, interact with, and wait for DOM elements.</p>
+        </li>
+      </ul>
+      <h2 class="">Motivation</h2>
+      <p class="paragraph">We chose Kotlin for this port because:</p>
+      <ul>
+        <li>
+          <p class="paragraph"><strong>First-class type safety and null safety</strong> help catch bugs early and make the code more robust.</p>
+        </li>
+        <li>
+          <p class="paragraph"><strong>It's the core language of our entire stack</strong> (backends, Android apps, shared libraries).</p>
+        </li>
+        <li>
+          <p class="paragraph"><strong>Multiplatform support</strong> is on the roadmap, allowing future compatibility with native and JS targets. <i>(Currently   JVM-only)</i></p>
+        </li>
+      </ul>
+      <h2 class="">Installation</h2>
+      <p class="paragraph">To use kdriver, add the following to your <code class="lang-kotlin">build.gradle.kts</code>:</p>
+      <div class="sample-container">
+        <pre><code class="block lang-kotlin" theme="idea">dependencies {<br>    implementation(&quot;dev.kdriver:core:0.1.10&quot;)<br>}</code></pre>
+<span class="top-right-position"><span class="copy-icon"></span>
+          <div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div>
+        </span></div>
+      <p class="paragraph">Make sure you have Maven Central configured:</p>
+      <div class="sample-container">
+        <pre><code class="block lang-kotlin" theme="idea">repositories {<br>    mavenCentral()<br>}</code></pre>
+<span class="top-right-position"><span class="copy-icon"></span>
+          <div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div>
+        </span></div>
+      <h2 class="">Usage</h2>
+      <p class="paragraph">Visit a website and do something on it:</p>
+      <div class="sample-container">
+        <pre><code class="block lang-kotlin" theme="idea">fun main() = runBlocking {<br>    val browser = Browser.create(this)<br>    val tab = browser.get(&quot;https://www.browserscan.net/bot-detection&quot;)<br>    // Use tab to interact with the page<br>    browser.stop()<br>}</code></pre>
+<span class="top-right-position"><span class="copy-icon"></span>
+          <div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div>
+        </span></div>
+      <p class="paragraph">More examples coming soon!</p>
+      <h2 class="">Acknowledgments</h2>
+      <p class="paragraph">Huge thanks to <a href="https://github.com/stephanlensky">@stephanlensky</a> for creating <a href="https://github.com/stephanlensky/zendriver">zendriver</a>, a brilliantly designed and maintained library that inspired this port. If you're using Python, we highly recommend checking out the original project!</p>
+      <h2 class="">Goals of the project</h2>
+      <p class="paragraph">The purpose of <strong>kdriver</strong> is to provide a clean, coroutine-native API for browser automation in Kotlin, while staying true to the goals of zendriver:</p>
+      <ol>
+        <li>
+          <p class="paragraph">Stay undetected in modern anti-bot environments</p>
+        </li>
+        <li>
+          <p class="paragraph">Offer a developer-friendly experience with minimal setup</p>
+        </li>
+        <li>
+          <p class="paragraph">Empower developers with a flexible, low-level browser interface</p>
+        </li>
+      </ol>
+      <p class="paragraph">This library is still in early development — feedback and contributions are very welcome!</p>
+      <h2 class="">Contributing</h2>
+      <p class="paragraph">We welcome contributions of all kinds — feel free to open issues, report bugs, or submit pull requests.</p>
+    </div>
     <h2 class="">All modules:</h2>
     <div class="table"><a data-name="-1907185090%2FMain%2F0" anchor-label="cdp" id="-1907185090%2FMain%2F0" data-filterable-set=""></a>
       <div class="table-row">

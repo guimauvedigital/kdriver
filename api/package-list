@@ -8,6 +8,7 @@ module:core
 dev.kdriver.core.browser
 dev.kdriver.core.connection
 dev.kdriver.core.dom
+dev.kdriver.core.exceptions
 dev.kdriver.core.extensions
 dev.kdriver.core.tab
 dev.kdriver.core.utils
